@@ -258,4 +258,16 @@ function getQuoteItems() {
   return quoteItems;
 }
 
-export { quoteItems, IVA_RATE, markupPercent, getQuoteItems };
+function getQuoteItemsWithMarkup() {
+  return quoteItems.map(item => {
+    const precioConMarkup = item.precioUnit * (1 + markupPercent / 100);
+    const ivaAmount = precioConMarkup * IVA_RATE;
+    return {
+      ...item,
+      precioUnit: precioConMarkup,
+      ivaAmount: ivaAmount
+    };
+  });
+}
+
+export { quoteItems, IVA_RATE, markupPercent, getQuoteItems, getQuoteItemsWithMarkup };

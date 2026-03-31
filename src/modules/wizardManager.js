@@ -1,5 +1,5 @@
 import { showToast } from './uiManager.js';
-import { getQuoteItems } from './quoteManager.js';
+import { getQuoteItems, getQuoteItemsWithMarkup, IVA_RATE } from './quoteManager.js';
 
 let currentStep = 1;
 const totalSteps = 5;
@@ -81,7 +81,16 @@ async function generateProposal() {
     return;
   }
   
-  const quoteItems = getQuoteItems();
+  const quoteItems = getQuoteItemsWithMarkup();
+  
+  // Recalculate totals with markup
+  let subtotal = 0;
+  let totalIva = 0;
+  quoteItems.forEach(item => {
+    subtotal += item.precioUnit * item.quantity;
+    totalIva += item.ivaAmount * item.quantity;
+  });
+  const total = subtotal + totalIva;
   
   const proposalData = {
     project: {
@@ -93,9 +102,9 @@ async function generateProposal() {
     solution: document.getElementById('project-solution').value || '',
     items: quoteItems,
     totals: {
-      subtotal: document.getElementById('total-subtotal').textContent,
-      iva: document.getElementById('total-iva').textContent,
-      total: document.getElementById('total-general').textContent
+      subtotal: `$${subtotal.toFixed(2)}`,
+      iva: `$${totalIva.toFixed(2)}`,
+      total: `$${total.toFixed(2)}`
     }
   };
   
