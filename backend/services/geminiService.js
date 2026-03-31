@@ -1,7 +1,15 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const API_KEY = process.env.GEMINI_API_KEY;
-const genAI = API_KEY ? new GoogleGenerativeAI(API_KEY) : null;
+let genAI = null;
+
+if (API_KEY) {
+  try {
+    genAI = new GoogleGenerativeAI(API_KEY);
+  } catch (e) {
+    console.error('Error initializing Gemini:', e.message);
+  }
+}
 
 function generateFallbackContent(data) {
   const { project, scope, outOfScope, solution, totals } = data;
@@ -84,9 +92,16 @@ Usa un tono profesional, orientado a ventas. El contenido debe ser detallado per
 `;
 
   try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-3.1-flash' });
+    // Use v1 API explicitly
+    const model = genAI.getGenerativeModel({ 
+      model: 'gemini-3.1-flash'
+    });
     
-    const result = await model.generateContent(prompt);
+    const result = await model.generateContent({
+      contents: [{ role: 'user', parts: [{ text: prompt }] }]
+    });
+    
+    return result.response.text();
     const response = await result.response;
     
     return response.text();
