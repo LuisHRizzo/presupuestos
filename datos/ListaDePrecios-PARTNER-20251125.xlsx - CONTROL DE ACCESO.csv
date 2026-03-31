@@ -1,0 +1,565 @@
+,,,https://www.bigdipper.com.ar,,,info@bigdipper.com.ar,,,,,,,,
+"Lista de precios a la fecha: 25/11/2025 -- Precios unitarios expresados en dólares estadounidenses, sin IVA",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,HIK ACCESO,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+DS-K2812,,2 Door Access Controller,HIKVISION,"119,00","168,00","196,00","10,5",22,0,0,0,0,2,24
+DS-K2602T-MB,,2 Door Access Controller ,HIKVISION,"91,00","134,00","168,00","10,5",4,0,0,0,0,1,5
+DS-K2602T,,2 Door Pro Access Control,HIKVISION,"171,00","253,00","316,00","10,5",2,0,0,0,0,0,2
+DS-K2622X,,2 Door Pro Series Access,HIKVISION,"186,00","300,00","374,00","10,5",20,0,0,0,0,1,21
+DS-K2622X-P,,2 Door Pro Series Access,HIKVISION,"99,00","159,00","199,00","10,5",10,0,0,0,0,0,10
+DS-K2814,,4 Door Access Controller ,HIKVISION,"134,00","190,00","221,00","10,5",21,0,0,0,0,2,23
+DS-K2604T-MB,,4 Door Access Controller,HIKVISION,"106,00","157,00","195,00","10,5",2,0,0,0,0,1,3
+DS-K2604T,,4 Door Pro Series Access ,HIKVISION,"213,00","314,00","393,00","10,5",4,0,0,0,0,9,13
+DS-K2624X,,4 Door Pro Series Access,HIKVISION,"231,00","371,00","464,00","10,5",31,0,0,0,0,0,31
+DS-K2624X-P,,4 Door Pro Series Access,HIKVISION,"116,00","187,00","234,00","10,5",20,0,0,0,0,0,20
+DS-K2708X,,8 Door Access Controller ,HIKVISION,"763,00","972,00","1350,00",21,2,0,0,0,0,0,2
+DS-K1T320MFWX,,Access Control Face/FP,HIKVISION,"84,00","120,00","136,00","10,5",0,0,0,1,5,2,8
+DS-TMG300-DR,,Barrera c/ brazo 3mts,HIKVISION,"567,00","872,00","1014,00",21,11,0,0,0,0,0,11
+DS-TMG300-DR-A-B,,Barrera c/boom 4mts LED,HIKVISION,"706,00","1085,00","1262,00",21,13,0,0,0,0,0,13
+DS-K1T502DBFWX-C,,Control Acceso SIP,HIKVISION,"167,00","237,00","277,00","10,5",33,0,0,0,2,1,36
+DS-K1T343MFWX,,Control Acceso Value,HIKVISION,"142,00","229,00","286,00",21,0,0,0,0,0,0,0
+DS-TMG035-TRIGGER,,Entrance & Exit Radar,HIKVISION,"236,00","381,00","476,00",21,31,0,0,0,0,0,31
+DS-K7P03,,Exit Button No Touch,HIKVISION,"11,90","16,10","19,00",21,1,0,0,0,0,0,1
+DS-K1T343MWX,,Face Access Terminal HIK,HIKVISION,"125,00","201,00","251,00","10,5",80,0,0,0,6,5,91
+DS-K1T670MFWX,,Face Rec Terminal,HIKVISION,"338,00","545,00","680,00","10,5",0,0,0,0,0,0,0
+DS-K1T670MWX-QR,,Face Recognition & QR,HIKVISION,"338,00","545,00","680,00",21,1,0,0,0,0,0,1
+DS-K1T344MBWX-E1,,Face Recognition Terminal,HIKVISION,"195,00","314,00","392,00","10,5",19,0,0,0,1,4,24
+DS-K1T673TDWX,,Face Recognition Terminal,HIKVISION,"947,00","1206,00","1676,00",21,42,0,0,0,1,0,43
+DS-K1T321MFWX,,Face recognition terminal,HIKVISION,"91,00","131,00","148,00","10,5",52,0,0,0,0,8,60
+DS-K1T342MFWX,,Face Recognition Terminal,HIKVISION,"176,00","284,00","355,00","10,5",0,0,0,0,0,0,0
+DS-K1T323MBFWX-E1,,Face&FP Terminal E1,HIKVISION,"119,00","175,00","219,00","10,5",190,0,0,0,0,2,192
+DS-K1T323MBWX-QRE1,,Face&QR Terminal,HIKVISION,"116,00","171,00","213,00","10,5",197,0,0,0,0,3,200
+DS-K1T805MBFWX,,Fingerprint AccessControl,HIKVISION,"99,00","141,00","165,00",21,0,0,0,0,0,0,0
+DS-K1T804AMF,,Fingerprint AccessControl,HIKVISION,"73,00","103,00","121,00","10,5",16,7,0,1,3,2,29
+DS-K1201AMF,,Fingerprint Reader,HIKVISION,"59,00","95,00","119,00",21,0,0,0,0,0,0,0
+DS-K1T981MF,,Iris Recognition Terminal,HIKVISION,"1917,00","2442,00","3391,00","10,5",1,0,0,0,0,0,1
+DS-K1109DKFB-QR,,Lector esclavo QR/FP,HIKVISION,"98,00","144,00","180,00",21,0,0,0,0,0,0,0
+DS-K1107AM,,MiFare Card Reader,HIKVISION,"20,00","28,30","33,00",21,24,0,0,0,0,2,26
+DS-K1107AMK,,MiFare Card Reader,HIKVISION,"25,90","37,00","43,00",21,2,0,0,0,0,0,2
+DS-K1109DKB,,MiFare Card Reader,HIKVISION,"61,00","90,00","113,00",21,17,0,0,2,0,3,22
+DS-K1T681DBWX,,Modular Face Recognition ,HIKVISION,"1207,00","1537,00","2134,00","10,5",0,0,0,0,0,0,0
+DS-KAB673-BQR,,Módulo BT/QR Hikvision,HIKVISION,"66,00","94,00","109,00",21,2,0,0,0,0,0,2
+DS-KAB673-FB,,Módulo FP/BT Hikvision,HIKVISION,"66,00","94,00","109,00",21,2,0,0,0,0,0,2
+DS-KAB673-FBQR,,Módulo FP/BT/QR Hikvision,HIKVISION,"87,00","123,00","144,00",21,0,0,0,0,0,0,0
+DS-KAB670-WB,,Módulo para DS-K1T670,HIKVISION,"69,00","98,00","114,00",21,1,0,0,0,0,0,1
+DS-KAB681-QRF,,Módulo QR/FP Hikvision,HIKVISION,"130,00","184,00","215,00",21,1,0,0,0,0,0,1
+DS-K1T342MFX-E1,,Multi-Biometric Access,HIKVISION,"182,00","294,00","367,00","10,5",0,0,0,0,1,0,1
+DS-K1T342MFWX-E1,,Multibiometric Access,HIKVISION,"184,00","296,00","371,00","10,5",15,0,0,0,0,2,17
+DS-KAB673-WBQR,,Peripheral Module QR 433 ,HIKVISION,"80,00","113,00","131,00",21,17,0,0,0,0,1,18
+DS-K1T673DWX,,Pro Series Face Access,HIKVISION,"523,00","666,00","924,00","10,5",13,0,0,0,0,2,15
+DS-K3B220X-L-M-Dp65,,Value Swing Barrier,HIKVISION,"962,00","1363,00","1591,00","10,5",0,0,0,0,0,0,0
+DS-K3B220X-M-M-Dp65,,Value Swing Barrier,HIKVISION,"1408,00","1995,00","2328,00","10,5",0,0,0,0,0,0,0
+DS-K3B220X-R-M-Dp65,,Value Swing Barrier,HIKVISION,"962,00","1363,00","1591,00","10,5",0,0,0,0,0,0,0
+DS-K1104M,,Vandal-proof Card Reader ,HIKVISION,"41,70","59,00","69,00",21,54,0,0,0,0,2,56
+DS-K1104MK,,Vandal-proof Reader w/Key,HIKVISION,"52,00","73,00","86,00",21,32,0,0,0,0,1,33
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,ZK ACCESO,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+SpeedFace-V4L-Pro-QR,,AC & TA Terminal,ZKTECO,"302,00","393,00","471,00","10,5",100,0,0,0,0,0,100
+Speedface-V3L-Lite,,AC & TA Terminal,ZKTECO,"168,80","219,50","263,40","10,5",99,0,0,0,0,0,99
+MK-V-IC,,Acceso autonomo ZKTeco,ZKTECO,"36,00","46,80","52,00",21,331,0,0,0,0,13,344
+SpeedFace-V5L-ID-ZAM230,,Biometric Access Control,ZKTECO,"0,00","0,00","0,00","10,5",200,0,0,0,0,0,200
+PROFACEX-P,,Control Acceso Biometrico,ZKTECO,"931,80","1211,00","1453,00","10,5",90,0,0,0,0,0,90
+X8-BT,,Control Acceso Biometrico,ZKTECO,"59,67","77,61","78,63",21,1,2,0,0,0,1,4
+SpeedFace V5L ZAM180,,Control Acceso Biometrico,ZKTECO,"428,00","556,00","668,00",21,5,0,0,0,0,0,5
+SenseFace 7A,,Control Acceso Biometrico,ZKTECO,"352,00","458,00","550,00","10,5",105,4,0,0,0,4,113
+SenseFace 2A,,Control Acceso Biometrico,ZKTECO,"104,70","136,20","115,00",21,0,0,0,0,0,0,0
+SenseFace 4A,,Control Acceso Biometrico,ZKTECO,"251,00","327,00","393,00","10,5",78,3,0,0,0,4,85
+F16,,Control Acceso F16,ZKTECO,"55,08","71,57","72,59",21,30,4,0,0,0,1,35
+FaceDepot-7BL-CH,,Control Acceso Facial,ZKTECO,"190,00","190,00","358,00","10,5",11,10,0,0,0,2,23
+SpeedFace-V5(WIFI),,Control Acceso Facial,ZKTECO,"323,60","420,67","421,69",21,1,0,0,0,0,0,1
+ProFaceX-CH (EXTERIOR),,Control Acceso Facial,ZKTECO,"537,03","698,11","699,13",21,50,0,0,0,0,0,50
+ProFaceX,,Control Acceso Facial,ZKTECO,"931,00","1211,00","1453,00",21,12,2,1,0,0,0,15
+ELITE-ACCESS,,Control Acceso Facial,ZKTECO,"604,86","786,34","787,36",21,6,1,0,0,0,0,7
+SpeedFace-V4L Pro-RFID,,Control Acceso Facial,ZKTECO,"251,90","327,50","393,00","10,5",137,3,0,0,0,0,140
+SpeedFace-V3L-QR-WiFi,,Control Acceso Facial QR ,ZKTECO,"201,05","215,73","216,75",21,586,8,0,2,0,1,597
+MULTIBIO800-H-ID,,Control Acceso Facial/ FP,ZKTECO,"589,51","766,50","918,75",21,1,0,0,0,0,0,1
+SpeedFace-V5L-QR,,Control Acceso Facial/QR,ZKTECO,"428,10","556,60","668,00",21,244,3,0,0,0,1,248
+F19-ID,,Control Acceso FP,ZKTECO,"179,01","232,73","233,75",21,57,8,0,0,0,1,66
+SF400,,Control Acceso FP,ZKTECO,"151,20","196,60","236,00","10,5",32,3,0,0,0,3,38
+MK-V-ID,,Control Acceso PIN,ZKTECO,"28,65","37,23","38,25","10,5",195,0,0,1,0,6,202
+MK-V-MF,,Control Acceso PIN,ZKTECO,"32,22","41,91","42,93","10,5",0,0,0,1,0,0,1
+SC405,,Control Acceso RFID,ZKTECO,"103,28","134,30","135,32",21,0,4,0,0,0,4,8
+SA40B-E,,Control Acceso Standalone,ZKTECO,"7,57","9,86","10,88",21,0,0,0,0,1,0,1
+ProFaceX-P-CH,,Control Acceso T&A,ZKTECO,"805,55","1047,20","1048,22",21,1,4,0,0,0,0,5
+SpeedFace M4,,Control Acceso T&A,ZKTECO,"428,00","556,60","668,00",21,356,4,0,0,0,2,362
+SpeedFace V5L WIFI- ZAM180,,Control Acceso ZKTeco,ZKTECO,"435,00","570,00","690,00",21,280,0,0,0,0,4,284
+F22-ID-ZLM60,,Control de Acceso F22,ZKTECO,"166,30","216,20","259,50",21,82,6,0,4,0,9,101
+ProfaceX-SL,,Control de Acceso Facial,ZKTECO,"762,88","991,78","992,80","10,5",2,0,0,0,0,0,2
+LF10,,Control de Acceso FP,ZKTECO,"89,51","116,37","117,39",21,139,240,0,0,0,2,381
+ProMA,,Control de acceso IP66 IK,ZKTECO,"478,60","622,20","746,70",21,95,6,0,0,0,6,107
+ProRF,,Control de Acceso RFID,ZKTECO,"126,00","163,80","196,60","10,5",28,9,0,0,0,3,40
+SpeedPalm-V5L,,Face & Palm Terminal,ZKTECO,"528,90","687,60","825,00","10,5",250,0,0,0,0,0,250
+SenseFace 3B,,Face Recognition Access C,ZKTECO,"163,80","213,00","255,00","10,5",0,0,0,0,0,0,0
+F35,,Figerprint Access Control,ZKTECO,"197,00","256,00","308,00","10,5",89,4,0,0,0,4,97
+FPModule-ID,,Modulo FP/Card 7BL,ZKTECO,"41,82","54,40","55,42","10,5",19,2,0,0,0,0,21
+Locker Pad-7B,,Terminal Control Lockers,ZKTECO,"520,54","676,69","677,71",21,2,0,0,0,0,0,2
+FACEDEPOT-7B-FP-ID-WIFI,,Terminal Dual AC T&A,ZKTECO,"385,56","501,25","502,27",21,6,2,0,0,0,1,9
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,PEATONAL,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+EAC63,,Acc Caja de tarjetas SBTL,ZKTECO,"172,13","223,81","224,83",21,2,0,0,0,0,0,2
+EAC62,,Acc QR FBL6000,ZKTECO,"275,40","358,02","359,04",21,2,0,0,0,0,0,2
+EAC64,,Accesorio Liso FBL6000,ZKTECO,"44,03","57,21","58,23",21,2,0,0,0,0,0,2
+TSA10,,Accesorio p/ lector FR120,ZKTECO,"23,38","30,43","31,45",21,10,0,0,0,0,0,10
+EAC61,,Accesorio p/Lector,ZKTECO,"103,28","134,30","135,32",21,2,0,0,0,0,0,2
+EAC60,,Accesorio RFID FBL6000,ZKTECO,"86,45","112,37","113,39",21,2,0,0,0,0,0,2
+DS-K3B530-DP90-2,,Aletas Acrilico Barrera,HIKVISION,"155,00","220,00","257,00",21,2,0,0,0,0,0,2
+DS-K3B530-DP65-2,,Aletas Barrera Swing 65,HIKVISION,"129,00","183,00","214,00",21,4,0,0,0,0,0,4
+R10,,Baranda Pasamanos,ZKTECO,"140,51","182,67","183,69",21,0,0,0,0,0,0,0
+R20,,Baranda Pasamanos,ZKTECO,"165,67","215,39","216,41",21,0,0,0,0,0,0,0
+R40,,Baranda Pasamanos Ciega,ZKTECO,"195,25","253,81","254,83",21,0,0,0,0,0,0,0
+R50,,Baranda Pasamanos Ciega,ZKTECO,"174,51","226,87","227,89",21,0,0,0,0,0,0,0
+DS-K3B530X-R-M,,Barrea Flap Centro + Der,HIKVISION,"3867,00","4925,00","6841,00","10,5",3,0,0,0,0,0,3
+SBTL7000,,Barrera Abatible,ZKTECO,"4089,69","5316,58","5317,60",21,1,0,0,0,0,0,1
+Mars-F1211,,Barrera Abatible Doble,ZKTECO,"3327,75","4326,08","4327,10",21,1,0,0,0,0,0,1
+SBTL7200,,Barrera Abatible Doble,ZKTECO,"3532,01","4591,62","4592,64",21,1,0,0,0,0,0,1
+SBTL9000,,Barrera Alta Velocidad,ZKTECO,"9900,00","12083,18","12084,20","10,5",2,0,0,0,0,0,2
+FBL5000,,Barrera de Acceso FBL,ZKTECO,"5191,29","6748,66","6749,68","10,5",1,0,0,0,0,0,1
+FBL6200 Pro,,Barrera Flap 2 Carriles,ZKTECO,"3394,31","4412,61","4413,63","10,5",1,0,0,0,0,0,1
+FBL6000 Pro,,Barrera Flap Bidireccion,ZKTECO,"3993,30","5191,29","5192,31","10,5",0,0,0,0,0,0,0
+Mars Pro-F1000,,Barrera Flap Bidireccion,ZKTECO,"8626,00","11214,00","13457,00","10,5",2,0,0,0,0,0,2
+Mars-F1000,,Barrera Flap Bidireccion,ZKTECO,"3993,30","5191,29","5192,31",21,1,0,0,0,0,0,1
+FBL5000 Pro,,Barrera Flap Biometrica,ZKTECO,"5191,29","6748,66","6749,68",21,2,0,0,0,0,0,2
+DS-K6B411TMX-R,,Barrera Flap Derecha,HIKVISION,"1408,00","1995,00","2328,00","10,5",0,0,0,0,0,0,0
+DS-K6B411TMX-L,,Barrera Flap Izq,HIKVISION,"1408,00","1995,00","2328,00","10,5",0,0,0,0,0,0,0
+FBL6033 Pro,,Barrera Peatonal Flap,ZKTECO,"5191,29","6748,66","6749,68","10,5",3,0,0,0,0,0,3
+SBT2000S-M,,Barrera Peatonal Metalica,ZKTECO,"1581,60","2056,10","2467,30","10,5",29,0,0,0,0,0,29
+TSA50,,Caja Recoleccion Tarjetas,ZKTECO,"13,77","17,94","18,96",21,10,0,0,0,0,0,10
+FHT2300,,Compuerta Giratoria,ZKTECO,"4601,00","5330,00","6140,00",21,0,0,0,0,0,0,0
+ASGY511B-L,,Left Flap barrier OUTLET,DAHUA,"1740,50","1740,50","1740,50",21,2,0,0,0,0,0,2
+DS-K3B530X-L-M,,Left Pro Swing Barriers,HIKVISION,"3867,00","4925,00","6841,00","10,5",3,0,0,0,0,0,3
+TSA12PRO,,Modulo FP TS2000Pro,ZKTECO,"24,82","32,30","33,32",21,18,0,0,0,0,0,18
+MA-R73 B,,Modulo RFID,ZKTECO,"189,38","246,16","247,18",21,2,0,0,0,0,0,2
+MA-R71 B,,Modulo RFID F-1000,ZKTECO,"51,68","67,15","68,17",21,2,0,0,0,0,0,2
+TSA13,,Modulo RFID TS2000,ZKTECO,"28,90","37,57","38,59",21,10,0,0,0,0,0,10
+TSA13PRO,,Modulo RFID TS2000Pro,ZKTECO,"28,90","37,57","38,59",21,10,0,0,0,0,0,10
+MA-R72 B,,Modulo RFID/ Huella,ZKTECO,"103,28","134,30","135,32",21,4,0,0,0,0,0,4
+TS1000Pro,,Molinete 3 Brazos,ZKTECO,"747,60","971,90","1166,00","10,5",0,0,0,0,0,0,0
+TS2000Pro,,Molinete 3 brazos ZKTeco,ZKTECO,"977,80","1271,10","1525,30","10,5",21,0,0,0,0,0,21
+FHT2322,,Molinete Cuerpo Completo,ZKTECO,"5291,00","6878,60","8254,00","10,5",0,0,0,0,0,0,0
+FHT2400D,,Molinete Cuerpo Completo,ZKTECO,"10208,40","13270,90","15925,10","10,5",1,0,0,0,0,0,1
+DS-K3G501X-R-MPg-Dm55,,Molinete Doble Carril,HIKVISION,"960,00","1298,00","1498,00","10,5",0,0,0,0,0,0,0
+FBL4011 Pro,,Molinete Flap ZKTeco,ZKTECO,"3335,00","4336,00","4936,00","10,5",0,0,0,0,0,0,0
+DS-K3G301X-R-M-Dm55,,Molinete Triple Brazo,HIKVISION,"610,00","825,00","951,00","10,5",0,0,0,0,0,0,0
+TSA03-51PRO,,Placa Control TS2000Pro,ZKTECO,"14,79","19,21","20,23","10,5",0,0,0,0,0,0,0
+TOP-LID,,Placa Montaje de Faciales,ZKTECO,"13,77","17,94","18,96",21,2,0,0,0,0,0,2
+ASGY511B-R1,,Right Flap Barrier OUTLET,DAHUA,"1760,56","1760,56","1760,56",21,2,0,0,0,0,0,2
+DS-K3B530X-M-M,,Swing Barrier de doble al,HIKVISION,"5780,00","7361,00","10224,00","10,5",2,0,0,0,0,0,2
+CRISTAL-SBT1000S,,Vidrio Templado Barrera,ZKTECO,"14,79","19,21","20,23",21,1,0,0,0,0,0,1
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,DAHUA ACCESO,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+ASI6213S-PW,,Acces Control Facial,DAHUA,"123,90","123,90","123,90","10,5",7,0,0,0,0,3,10
+ASI3213A-W,,Control de acceso DAHUA,DAHUA,"88,50","88,50","88,50","10,5",88,0,0,0,0,5,93
+ASM101A,,Enrolador de Huellas,DAHUA,"59,00","59,00","59,00",21,72,0,0,1,0,5,78
+ASI8213SA-W,,Face Rec Access OUTLET,DAHUA,"206,50","206,50","206,50","10,5",1,0,0,0,0,0,1
+ASR1101M-V1,,MiFare Slave  Reader,DAHUA,"38,94","38,94","38,94",21,190,0,0,0,0,3,193
+ASI8216DA-W,,Multi Biometric OUTLET,DAHUA,"253,70","253,70","253,70","10,5",1,0,0,0,0,0,1
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,OUTLET,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+FV18,,Acceso Biometrico OUTLET,ZKTECO,"46,00","46,00","46,00",21,3,0,0,0,0,1,4
+ProFaceX-CH-TI-WIFI,,Asistencia Facial WiFi,ZKTECO,"286,00","286,00","286,00",21,1,0,0,0,0,0,1
+RevFace-10-TI-WiFi,,Asistencia Facial WiFi,ZKTECO,"98,00","98,00","98,00",21,17,1,1,0,0,0,19
+RevFace15-TI,,Asistencia Facial/termico,ZKTECO,"406,00","406,00","406,00",21,42,5,0,0,0,2,49
+iClock700-ID,,Asistencia huella OUTLET,ZKTECO,"190,00","190,00","368,65",21,0,1,0,0,0,0,1
+BR1200FBE,,Asistencia QR/FP/RFID,ZKTECO,"209,00","209,00","209,00",21,1,6,0,0,0,0,7
+Padlock,,Candado con Huella,ZKTECO,"22,00","22,00","22,00",21,0,0,0,0,0,0,0
+HBL200B,,Cerradura Facial/FP,ZKTECO,"200,00","200,00","200,00",21,11,5,0,0,0,0,16
+LH6000-R-INWARD,,Cerradura Hotelera DER,ZKTECO,"42,00","42,00","42,00",21,2,1,0,0,0,0,3
+LH6000-L-INWARD,,Cerradura Hotelera IZQ,ZKTECO,"42,00","42,00","42,00",21,3,0,0,0,0,0,3
+LH6000-R-OUTWARD,,Cerradura Hotelera IZQ,ZKTECO,"42,00","42,00","42,00",21,3,0,0,0,0,0,3
+LH6000-L-OUTWARD,,Cerradura Hotelera IZQ,ZKTECO,"42,00","42,00","42,00",21,3,0,0,0,0,0,3
+HBL100-Z,,Cerradura multibiométrica,ZKTECO,"203,00","203,00","203,00",21,0,1,0,0,0,0,1
+HBL100B,,Cerradura multibiométrica,ZKTECO,"197,00","197,00","197,00",21,4,2,0,0,0,1,7
+ASGG100T-E,,Chasis Dahua OUTLET,DAHUA,"150,00","150,00","150,00",21,29,0,0,0,0,0,29
+ASC3202B,,Control 2 puertas OUTLET,DAHUA,"141,60","141,60","141,60","10,5",18,6,0,0,0,0,24
+ASC2208C-S,,Control 8 puertas OUTLET,DAHUA,"177,00","177,00","177,00","10,5",25,0,0,0,0,0,25
+SpeedFace M2,,Control AC T&A ADMS,ZKTECO,"223,00","268,52","268,52",21,0,4,0,1,0,4,9
+Speedface V4L-ZAM170,,Control AC T&A Facial,ZKTECO,"149,00","175,00","175,00",21,26,0,0,0,1,3,30
+Speedface V4L-ZAM180,,Control AC T&A Facial,ZKTECO,"149,00","175,00","175,00",21,34,5,0,10,2,6,57
+ASI6214S-PW,,Control Acces Face OUTLET,DAHUA,"120,00","120,00","120,00","10,5",144,10,0,0,0,6,160
+ASI3214A-W,,Control acceso DH OUTLET,DAHUA,"112,10","112,10","112,10","10,5",30,395,0,0,1,3,429
+ProfaceX-CH-TD-WiFi,,Control Asistencia OUTLET,ZKTECO,"115,00","115,00","115,00",21,0,0,0,0,0,1,1
+ASA1222E-S,,Control Asistencia OUTLET,DAHUA,"45,24","54,23","54,23",21,1,7,0,0,0,0,8
+G4-TI,,Control Asistencia OUTLET,ZKTECO,"115,00","115,00","115,00",21,13,6,0,0,0,1,20
+G4L,,Control Asistencia OUTLET,ZKTECO,"280,00","280,00","573,84",21,9,1,0,0,0,6,16
+ASA1222GL,,Control Asistencia OUTLET,DAHUA,"38,94","38,94","38,94",21,302,0,0,0,0,4,306
+SpeedFace M2-ZAM180-WiFi,,Control de Acceso Facial ,ZKTECO,"235,00","290,00","290,00",21,72,2,0,0,0,0,74
+FACEDEPOT-7BL-FP-ID-WiFi,,Control de acceso OUTLET,ZKTECO,"190,00","190,00","358,00",21,21,2,0,0,0,4,27
+Procapture-X,,Control de Acceso SilkID,ZKTECO,"265,00","265,00","265,00",21,93,2,0,0,0,2,97
+SpeedFace V4L ZAM180-Int-WiFi,,Control T&A Biometrico,ZKTECO,"149,00","175,00","175,00",21,73,0,0,0,0,6,79
+PROFACE-X-CH-TD,,Control T&A Facial,ZKTECO,"286,00","286,00","286,00",21,0,0,0,0,0,5,5
+ASC1208C,,Controlador de 8 OUTLET,DAHUA,"177,00","177,00","177,00","10,5",9,4,0,0,0,1,14
+Cred-Vento,,Credencial Vento OUTLET ,HID,"1,50","1,50","1,50","10,5",9989,0,0,0,0,9,9998
+ASF7K-F,,Extension Huella OUTLET,DAHUA,"53,10","53,10","53,10",21,40,0,0,0,0,0,40
+ASI8213S-W-V1,,Face Access Contr OUTLET,DAHUA,"354,00","354,00","354,00","10,5",79,0,0,0,0,4,83
+ASI3203E-W,,Face Access OUTLET,DAHUA,"50,74","50,74","50,74","10,5",21,0,0,0,0,2,23
+ASI8214S-W-V1,,Face rec Acceso DH OUTLET,DAHUA,"413,00","413,00","413,00","10,5",32,12,0,0,0,10,54
+ASA3223A-W,,Face Time Access OUTLET,DAHUA,"82,60","82,60","82,60",21,420,0,0,0,0,8,428
+ASI2212J-PW,,IC Card Huella OUTLET,DAHUA,"76,70","76,70","76,70","10,5",139,0,0,0,0,4,143
+ASI2212J-DPW,,ID Card Huella OUTLET,DAHUA,"76,70","76,70","76,70","10,5",138,0,0,0,0,7,145
+FR1500S-MF,,Lector de huellas RS485,ZKTECO,"62,00","62,00","62,00","10,5",106,12,0,0,0,4,122
+ASR2100A-ME,,Lector esclavo OUTLET,DAHUA,"31,86","31,86","31,86",21,478,0,0,0,0,4,482
+ASR2101A-ME,,Lector esclavo OUTLET,DAHUA,"36,58","36,58","36,58",21,221,0,0,0,0,3,224
+KF1200-IC,,Lector Facial Serie InBio,ZKTECO,"50,00","50,00","50,00",21,7,6,0,0,0,1,14
+FR1200-MF,,Lector FP/RFID RS485,ZKTECO,"53,00","53,00","53,00","10,5",234,9,0,3,0,8,254
+ASR1102A-D-V3,,Lector Huella RFID OUTLET,DAHUA,"31,86","31,86","31,86",21,181,0,0,0,0,2,183
+FR1500-IC,,Lector RFID IC/FP RS485,ZKTECO,"62,00","62,00","62,00","10,5",14,0,0,0,0,2,16
+Vento,,Lector Vento HID OUTLET,HID,"68,00","68,00","68,00",21,744,0,0,0,0,5,749
+U2000F,,Lectora UHF OUTLET,ZKTECO,"410,00","460,00","460,00","10,5",2,0,0,0,0,1,3
+C2-260,,Panel Control Acceso,ZKTECO,"48,00","48,00","48,00","10,5",316,8,0,0,0,8,332
+ASF7K-Q,,QR Access Module OUTLET,DAHUA,"47,20","47,20","47,20",21,40,0,0,0,0,0,40
+ASF7K-FQ,,QR-FP Module OUTLET,DAHUA,"76,70","76,70","76,70",21,40,0,0,0,0,0,40
+G4(QR),,Rec Facial ZKTECO OUTLET,ZKTECO,"280,00","280,00","556,58",21,27,2,0,0,0,0,29
+ASGB211Z-R,,Righ Swing Barrier OUTLET,DAHUA,"826,00","826,00","826,00",21,0,0,0,0,0,0,0
+iClass 2K - Prog,,Tarj MiFare 2K Prg OUTLET,HID,"3,50","3,50","3,50","10,5",1000,0,0,0,0,0,1000
+ProxCard II - Prog,,Tarjeta RFID HID OUTLET,HID,"2,10","2,10","2,10","10,5",1000,0,0,0,0,0,1000
+LFACE10,,Term Asistencia OUTLET,ZKTECO,"69,00","69,00","69,00",21,455,15,0,1,0,4,475
+BR1200S-PBE,,Term Asistencia QR/RFID,ZKTECO,"203,00","203,00","203,00",21,8,2,0,0,0,0,10
+ELITE-PASS,,Terminal Facial OUTLET,ZKTECO,"250,00","250,00","400,00",21,1,0,0,0,0,1,2
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,CYGNUS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+EL-280F,,Accesorio F Cerradura,CYGNUS,"77,48","100,83","115,75",21,133,22,0,2,0,3,160
+EL-280L,,Accesorio L Cerradura,CYGNUS,"18,61","24,21","26,62",21,132,5,0,0,8,8,153
+EL-500L,,Accesorio L Cerradura,CYGNUS,"22,37","29,11","33,40",21,38,66,0,0,0,2,106
+EL-180L,,Accesorio L Cerradura,CYGNUS,"15,42","20,07","23,04",21,48,23,0,2,0,2,75
+EL-180U,,Accesorio U Cerradura,CYGNUS,"16,58","20,17","23,16",21,5,107,0,0,0,7,119
+EL-280U,,Accesorio U Cerradura,CYGNUS,"18,61","24,16","28,66",21,14,24,0,0,1,6,45
+EL-280ZL,,Accesorio ZL Cerradura,CYGNUS,"40,53","52,72","58,01",21,0,0,1,0,0,2,3
+EL-500ZL,,Accesorio ZL Cerradura,CYGNUS,"57,82","75,24","79,85",21,1,0,0,0,0,0,1
+EL-180ZL,,Accesorios ZL Cerradura,CYGNUS,"35,18","45,76","50,78",21,2,1,0,0,0,1,4
+EX-906,,Botón de EXIT Metálico,CYGNUS,"22,98","29,89","34,31",21,13,35,0,2,1,13,64
+EX-901,,Boton Exit Metalico,CYGNUS,"4,00","5,20","6,50",21,64,16,0,0,1,11,92
+EX-905,,Botón EXIT Metalico,CYGNUS,"20,05","26,08","29,95",21,2,0,0,0,4,9,15
+EX-909-S2,,Botón Exit Metalico,CYGNUS,"8,00","10,50","12,00",21,232,0,0,4,7,13,256
+EX-907-S2,,Botón EXIT no touch,CYGNUS,"8,20","10,80","12,50",21,182,0,0,0,2,9,193
+EX-907,,Botón EXIT no-touch,CYGNUS,"27,14","35,32","40,55",21,1,1,0,0,9,0,11
+EX-912,,Botón EXIT Touch LED,CYGNUS,"27,14","35,32","40,55",21,0,0,0,0,0,0,0
+ID-EM01,,Card ID - EM 125Khz,CYGNUS,"0,74","1,09","1,23",21,0,0,20,0,0,0,20
+ID-MF01,,Card ID - MF 13.56Mhz,CYGNUS,"1,26","1,63","1,87",21,27,38,10,10,237,7,329
+PL-820,,Cerradura de Pestillo,CYGNUS,"16,69","21,75","24,98",21,21,0,0,0,0,0,21
+EL-180,,Cerradura magnética 180Kg,CYGNUS,"49,09","63,88","70,64",21,0,0,0,0,0,0,0
+EL-280,,Cerradura magnética 280Kg,CYGNUS,"69,55","90,50","99,31",21,0,0,0,0,0,0,0
+EL-500,,Cerradura Magnética 500Kg,CYGNUS,"142,64","182,23","213,07",21,0,6,0,0,0,0,6
+EL-60,,Cerradura Magnética 60kg,CYGNUS,"39,88","51,90","59,58",21,1,0,1,0,0,0,2
+ER-602A,,Cerradura Motorizada RFID,CYGNUS,"79,24","103,11","118,38",21,0,0,0,0,0,0,0
+EB-801,,Cerradura Pasante,CYGNUS,"50,10","65,19","74,83",21,0,0,0,0,0,0,0
+ACS-303B,,Control Acceso PIN/FP,CYGNUS,"30,00","39,00","42,00",21,1,0,1,0,0,4,6
+ACS-301B,,Control Acceso PIN/FP,CYGNUS,"30,00","39,00","45,00",21,0,18,0,1,0,0,19
+ACS-301W,,Control Acceso PIN/FP,CYGNUS,"26,00","35,00","42,00",21,164,62,0,1,0,7,234
+ACS-302W,,Control Acceso RFID/FP,CYGNUS,"30,00","39,00","42,00",21,1,1,0,0,0,0,2
+ID-EM02,,Tag ID - EM 125 kHz,CYGNUS,"0,82","1,06","1,23",21,0,0,0,0,0,0,0
+ID-MF02,,Tag ID - MF 13.56 MHz,CYGNUS,"1,26","1,61","1,85",21,0,0,23,0,0,0,23
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,ACCESORIOS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+DS-K4H258-U,,Accesorio U Cerradura,HIKVISION,"4,20","5,70","6,60",21,23,0,0,0,0,3,26
+DS-K4DC104,,Automatic Door Closer,HIKVISION,"18,40","24,80","29,00",21,22,0,0,0,0,1,23
+BackupBattery,,Bateria Respaldo Zkteco,ZKTECO,"1,53","1,96","2,98",21,0,0,0,0,0,1,1
+ZM100-Bateria,,Bateria ZM1000,ZKTECO,"33,07","43,01","44,03",21,0,0,0,0,0,0,0
+EB103-G,,Boton de salida,ZKTECO,"10,03","13,01","14,03",21,0,0,0,0,0,0,0
+ASF908,,Botón de salida IR OUTLET,DAHUA,"9,00","9,00","9,00",21,259,2,0,0,4,9,274
+TLEB102-R,,Boton de salida no touch,ZKTECO,"19,81","25,76","26,78",21,187,0,0,0,5,1,193
+DS-K7PEB-G,,Emergency Break Glass,HIKVISION,"8,60","11,60","13,40","10,5",12,0,0,0,5,2,19
+DS-K7P04,,Exit Button,HIKVISION,"10,50","14,20","16,00","10,5",18,0,0,0,5,2,25
+EX-943,,Infrared Sensor exit Butt,CYGNUS,"36,82","47,91","53,24","10,5",27,10,0,0,0,6,43
+FM11RF08-M1,,M1 Card,HIKVISION,"0,40","0,50","0,60","10,5",45,0,0,0,40,89,174
+DS-K7M102-M,,M1 Non-Contacting IC Card,HIKVISION,"0,50","0,60","0,70",21,408,0,0,0,0,209,617
+ASF280A-V1,,Magnetic lock 280Kg,DAHUA,"21,24","21,24","21,24",21,0,0,0,0,0,0,0
+DS-K7P01,,Metal Exit Button,HIKVISION,"6,50","8,70","10,10","10,5",0,0,0,0,5,12,17
+DS-K7M101-M1,,MiFare M1 Contacless Card,HIKVISION,"0,20","0,30","0,40",21,0,0,0,0,0,100,100
+DS-K4H258S,,One-Door Magnetic Lock,HIKVISION,"18,40","24,80","29,00",21,20,0,0,0,0,6,26
+DS-TMG012-4,,Remote Control For DS-TMG,HIKVISION,"14,80","23,30","28,00",21,1,0,0,0,0,0,1
+DS-K2M061,,Secure Door Control Unit,HIKVISION,"36,80","52,00","61,00",21,20,0,0,0,0,4,24
+DS-K4H255S,,Single Door Magnetic Lock,HIKVISION,"13,50","18,30","21,00",21,0,0,0,0,0,0,0
+DS-K4H255-LZ,,Soporte Cerradura DS,HIKVISION,"6,70","9,10","10,40",21,0,0,0,0,0,2,2
+DS-KAB6-W1,,Soporte Equipos Serie DS,HIKVISION,"14,40","20,50","24,00",21,0,0,0,0,0,0,0
+Rots-1,,Soporte Giratorio ZKTeco,ZKTECO,"27,54","35,79","36,81",21,0,0,0,0,0,0,0
+DS-KAB6-ZU1,,Soporte Molinete Hik,HIKVISION,"31,90","45,00","53,00",21,0,0,0,0,0,0,0
+ASF053-ZJ,,Soporte molinete OUTLET,DAHUA,"27,00","27,00","27,00",21,2,0,0,0,0,3,5
+KJZ-03,,Soporte Montaje Molinete,ZKTECO,"39,95","51,94","52,96",21,1,0,0,0,0,0,1
+DS-K4H258D-LZ,,Soporte para K4H258D,HIKVISION,"18,70","25,30","29,00",21,41,0,0,0,0,5,46
+Class SEOS - Essential,,Tarj Seos Essentia OUTLET,HID,"0,00","0,00","0,00","10,5",800,0,0,0,0,0,800
+iClass SEOS - Virg,,Tarjeta iClass SEOS - No ,HID,"3,70","4,10","4,70","10,5",300,0,0,0,0,0,300
+iClass SEOS - Prog,,Tarjeta iClass SEOS - Pro,HID,"3,70","4,10","4,70","10,5",500,0,0,0,0,0,500
+iClass 2K - Virg,,Tarjeta MiFare 2K No Prog,HID,"3,90","4,30","5,00",21,500,0,0,0,0,0,500
+iClass Clamshell - Prog,,Tarjeta MiFare tipo clams,HID,"2,40","2,60","3,00","10,5",80,0,0,0,0,0,80
+iClass Clamshell - Virg,,Tarjeta MiFare tipo clams,HID,"2,40","2,60","3,00","10,5",300,0,0,0,0,0,300
+ISOProx II - Virg,,Tarjeta RFID - No program,HID,"4,20","4,85","5,60","10,5",250,0,0,0,0,0,250
+ISOProx II - Prog,,Tarjeta RFID programada,HID,"4,50","5,00","5,80","10,5",250,0,0,0,0,0,250
+ProxCard II - Virg,,Tarjeta RFID tipo clamshe,HID,"2,00","2,00","2,00","10,5",500,0,0,0,0,0,500
+DS-K7P07,,Touchless Exit Button,HIKVISION,"7,30","9,90","11,30",21,3,0,0,0,0,0,3
+DS-K4H258D,,Two-Door Magnetic Lock,HIKVISION,"34,80","47,00","54,00",21,38,0,0,0,0,5,43
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,CONTROL ID,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+IDUHF-LITE-ES,,Antena UHF Lite,CONTROL iD,"525,00","565,00","665,00","10,5",1,0,0,0,0,2,3
+IDUHF,,Antena UHF Standalone,CONTROL iD,"690,53","987,45","1101,39","10,5",1,0,0,0,0,0,1
+IDFACEPRO-FP-A,,Control Acceso Face/FP,CONTROL iD,"368,28","526,64","587,41","10,5",0,2,0,0,0,0,2
+IDANANO-BP-A,,Control Acceso FP/RFID,CONTROL iD,"198,78","284,25","317,05","10,5",4,2,0,0,2,2,10
+IDF-BP-ASK,,Control Acceso FP/RFID,CONTROL iD,"292,32","418,02","466,25","10,5",9,2,0,0,0,2,13
+IDAPRO-BP-H,,Control Acceso PIN,CONTROL iD,"308,00","335,00","390,00","10,5",1,0,0,0,0,0,1
+IDTOUCH-ASK,,Control Acceso PIN/RFID,CONTROL iD,"50,64","72,41","80,77","10,5",1,2,0,0,0,0,3
+IDTOUCH-MIF,,Control Acceso PIN/RFID,CONTROL iD,"59,85","85,58","95,45","10,5",3,2,0,1,0,3,9
+IDTOUCHIP65-ASK,,Control Acceso PIN/RFID,CONTROL iD,"53,20","58,00","69,00","10,5",0,3,1,2,0,4,10
+IDTOUCHIP65-MIF,,Control Acceso PIN/RFID,CONTROL iD,"80,56","115,20","128,50","10,5",26,1,0,0,0,3,30
+IDFLEX-AC-BP-A,,Control Acceso RFID/FP,CONTROL iD,"184,14","263,32","293,70",21,34,2,0,0,0,4,40
+IDFMAX-FP-A,,Control Acceso SIP Facial,CONTROL iD,"379,00","410,00","480,00","10,5",72,0,0,0,0,2,74
+IDBOX,,Controladora de 4 puertas,CONTROL iD,"218,00","235,00","285,00","10,5",22,5,0,0,0,1,28
+IDBIO,,Lector de huella USB,CONTROL iD,"165,73","236,99","264,33",21,2,0,0,0,0,0,2
+IDP-S-ASK,,Lector de proximidad RFID,CONTROL iD,"39,13","55,96","62,41",21,0,0,0,1,0,2,3
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,LECTORES,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+UHF-5F Pro,,Antena UHF ZKTeco,ZKTECO,"235,45","306,09","307,11",21,0,0,0,0,0,0,0
+DS-K1F100-D8E,,Card Enrollment Station,HIKVISION,"27,90","40,00","45,00",21,11,0,0,0,2,2,15
+DS-K1109DB,,Card Reader,HIKVISION,"54,00","79,00","99,00",21,7,0,0,0,0,1,8
+CR20M,,"Card Reader 13,56Mhz",ZKTECO,"28,90","37,57","38,59","10,5",35,3,0,0,0,3,41
+ASR1100B-D-V1,,Card Swiping Acces OUTLET,DAHUA,"18,88","18,88","18,88",21,263,0,0,0,0,2,265
+SLK20R,,Enrolador Biométrico,ZKTECO,"71,57","93,08","94,10","10,5",0,0,0,0,0,0,0
+ZK6500,,Enrolador de Huellas,ZKTECO,"26,52","34,51","35,53","10,5",0,1,0,0,0,0,1
+ZK9500,,Enrolador de huellas USB ,ZKTECO,"47,40","61,70","74,10","10,5",0,0,0,0,0,0,0
+D147-H,,Enrolador USB Mifare 13.5,ZKTECO,"48,20","62,65","63,67",21,8,4,0,0,0,0,12
+PV10R,,Escaner de Palma ZKteco,ZKTECO,"104,04","135,24","136,26","10,5",44,10,0,0,0,4,58
+ProID20 BE,,Green Label RFID Reader,ZKTECO,"11,14","14,45","15,47","10,5",66,0,0,0,0,7,73
+ProID10 BE,,Green Label RFID Reader Z,ZKTECO,"12,00","14,80","17,50","10,5",0,3,0,0,0,0,3
+ProID30 BE,,Greenlabel RFID Reader,ZKTECO,"12,41","16,15","17,17","10,5",46,10,0,0,0,6,62
+ASR1101M-D-V1,,ID Card Reader OUTLET,DAHUA,"38,94","38,94","38,94",21,111,0,0,0,0,3,114
+QR600-HK-E,,Lector de cod QR ZKTeco,ZKTECO,"115,69","150,37","151,39","10,5",18,5,0,0,0,8,31
+FR1500S-ID,,Lector de huellas RS485,ZKTECO,"84,15","109,40","110,42","10,5",212,9,0,0,0,11,232
+ProID20 BE-RS,,Lector de tarjetas 125 Kh,ZKTECO,"20,66","26,86","27,88","10,5",168,10,0,0,0,16,194
+ProID30 BE-RS,,Lector de tarjetas 125 Kh,ZKTECO,"22,02","28,65","29,67","10,5",1,0,0,1,0,3,5
+iClass SE R10,,Lector de tarjetas MiFare,HID,"99,00","99,00","99,00","10,5",2,0,0,0,0,2,4
+ProID30 BM,,Lector de tarjetas MIFARE,ZKTECO,"15,13","19,64","20,66","10,5",0,0,0,0,0,0,0
+Signo 20,,Lector Esclavo HID,HID,"155,00","155,00","155,00",21,2,0,0,0,0,2,4
+KF1200-ID,,Lector Facial Serie InBio,ZKTECO,"98,43","127,93","128,95",21,40,2,0,1,0,2,45
+FR1500-ID,,Lector FP+RFID RS485,ZKTECO,"88,15","114,58","115,60","10,5",0,0,0,0,0,0,0
+Signo 25B,,Lector FP/RFID HID,HID,"720,00","720,00","720,00","10,5",20,0,0,0,0,0,20
+FR1200-ID,,Lector Huella + RFID,ZKTECO,"78,80","102,43","103,45","10,5",1,0,0,0,0,0,1
+FR1500A-ID,,Lector Huellas RS485,ZKTECO,"84,15","109,40","110,42","10,5",215,0,0,0,0,10,225
+FR1500A-MF,,Lector Huellas Rs485,ZKTECO,"93,08","121,04","122,06","10,5",5,0,0,0,0,3,8
+DS-K1F820-F,,Lector Huellas USB,HIKVISION,"40,90","55,00","64,00",21,6,0,0,0,0,1,7
+KR101M,,Lector MiFare IP65,ZKTECO,"13,77","17,94","18,96","10,5",1,11,0,0,0,1,13
+ProID10 BM,,Lector MIFARE Wiegand,ZKTECO,"14,60","18,00","22,00","10,5",15,6,0,0,0,1,22
+ProID30 BEMD-RS,,Lector Multi Tarjeta,ZKTECO,"48,20","62,65","63,67",21,28,0,0,0,0,9,37
+multiClass SE RP10,,Lector Multi Tarjeta HID,HID,"127,00","127,00","127,00","10,5",32,0,0,0,0,0,32
+ProID20 BEMD-RS,,Lector Multitecnologia,ZKTECO,"37,15","48,28","49,30",21,106,12,0,0,0,18,136
+QR600-H-E,,Lector QR y RFID,ZKTECO,"103,79","134,90","135,92","10,5",0,0,0,0,0,0,0
+KR101E,,Lector RFID 1,ZKTECO,"9,61","12,50","13,52","10,5",1,0,0,0,0,0,1
+CR20E,,Lector RFID 2,ZKTECO,"19,30","25,08","26,10","10,5",0,0,0,0,0,0,0
+MR1010 ,,Lector RFID IP66 IK10,ZKTECO,"35,79","46,50","47,52","10,5",29,8,0,0,0,6,43
+CR20MW,,Lector RFID USB,ZKTECO,"46,58","60,52","61,54","10,5",21,8,0,0,0,9,38
+UHF-6FPro,,Lector TAG UHF 18m ZKTeco,ZKTECO,"660,00","858,00","1030,00",21,1,0,0,0,0,0,1
+ProxPoint Plus,,Lector Tarjetas RFID,HID,"109,00","109,00","109,00","10,5",19,0,0,0,0,0,19
+UHF-10F pro,,Lector UHF Pro,ZKTECO,"272,68","354,45","355,47","10,5",0,0,0,0,0,0,0
+DS-K1109DKB-QR,,QR & MiFare Card Reader,HIKVISION,"80,00","118,00","148,00",21,1,0,0,0,0,12,13
+FR1300,,Teclado Lector Huella,ZKTECO,"93,30","121,30","145,60","10,5",64,8,0,0,0,5,77
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,INSPECCION,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+ZK-D1065S,,Arco detector de metales ,ZKTECO,"827,00","1075,00","1920,00",21,0,0,0,0,0,0,0
+ZK-D4330,,Arco detector de metales ,ZKTECO,"2979,00","3872,00","4647,30",21,6,0,0,0,0,0,6
+ZK-D2180,,Arco Detector de Metales ,ZKTECO,"926,10","1204,00","1444,00",21,11,0,0,0,0,0,11
+ZK-D1065,,Arco Detector de Metales ,ZKTECO,"827,00","1075,10","1290,00",21,0,0,0,0,0,0,0
+ZK-D3180,,Arco detector de metales ,ZKTECO,"1146,60","1490,60","1788,00",21,0,0,0,0,0,0,0
+ISD-SMG533LC-I,,Arco detector de metales ,HIKVISION,"8075,00","10526,00","14619,00",21,1,0,0,0,0,0,1
+ZK-M20,,Cam Under Vehicle,ZKTECO,"1193,00","1552,00","1862,00",21,2,0,0,0,0,0,2
+ZK-D180,,Detector de Metales,ZKTECO,"71,70","93,30","112,00",21,57,1,0,0,2,5,65
+NP-SH100,,Detector de Metales,HIKVISION,"39,60","62,00","75,00",21,14,0,0,0,0,0,14
+ZK-D100S,,Detector de metales mano,ZKTECO,"28,80","37,50","45,00",21,397,5,0,0,0,13,415
+ISD-SC6550S-4CVL,,Intelligent X-Ray Inspect,HIKVISION,"24578,00","39583,00","49478,00",21,1,0,0,0,0,0,1
+ZK-MD5000,,Metal Detector,ZKTECO,"0,00","0,00","0,00",21,2,0,0,0,0,0,2
+NP-SG333L,,Metal detector,HIKVISION,"1741,00","2742,00","3290,00",21,2,0,0,0,0,0,2
+ISD-SMG1118L,,Metal Detector,HIKVISION,"1468,00","2364,00","2955,00",21,0,0,0,0,0,0,0
+ISD-SMG318L,,Metal Detector,HIKVISION,"5192,00","8362,00","10453,00",21,1,0,0,0,0,0,1
+ZK-D160,,Port metal detector,ZKTECO,"28,80","37,50","45,00",21,200,0,0,0,0,0,200
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,ZK ASISTENCIA,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+G3-H-ID,,Asistencia Biometrico,ZKTECO,"532,00","692,00","830,00",21,2,1,0,0,0,1,4
+S922-3G,,Portable T&A 3G,ZKTECO,"633,00","824,00","988,00",21,11,0,0,0,0,0,11
+S922-W,,Portable T&A WIFI,ZKTECO,"633,00","824,00","988,00",21,7,0,0,0,0,0,7
+MB360-Plus,,T&A Terminal ZKTeco ADMS,ZKTECO,"190,20","247,30","296,80",21,556,0,0,0,1,15,572
+iClock3000-ID,,Terminal AC / T&A ,ZKTECO,"142,80","185,64","186,66",21,2,0,0,0,0,0,2
+EFace10-WiFi,,Terminal AC T&A,ZKTECO,"149,20","193,90","232,70",21,10,0,0,0,0,0,10
+P160-ID,,Terminal AC T&A Biometric,ZKTECO,"134,30","174,59","175,61",21,12,9,0,0,0,2,23
+Horus H1,,Terminal portatil T&A,ZKTECO,"1014,00","1318,00","1581,00",21,42,0,0,0,0,2,44
+LX15,,Terminal T&A,ZKTECO,"52,36","68,09","69,11",21,443,5,0,1,0,1,450
+Horus-E1-FP,,Terminal T&A,ZKTECO,"456,00","593,00","712,00",21,53,2,0,0,0,2,57
+iClock880-ID,,Terminal T&A,ZKTECO,"400,00","520,00","625,00",21,0,0,0,0,0,0,0
+MB360-ID,,Terminal T&A,ZKTECO,"199,90","247,30","296,80",21,1,11,0,1,1,9,23
+MB360-ID-ADMS,,Terminal T&A ADMS,ZKTECO,"199,90","247,30","296,80",21,0,0,0,0,0,0,0
+MB560-VL-WiFi,,Terminal T&A Biometrica,ZKTECO,"207,91","270,30","271,32",21,0,0,0,0,0,0,0
+G3-Pro,,Terminal T&A Biometrica,ZKTECO,"583,00","758,00","909,00",21,9,0,0,0,0,0,9
+uFace402 Plus,,Terminal T&A Biometrica,ZKTECO,"481,00","626,00","751,00",21,23,0,0,0,0,0,23
+uFace800 Plus,,Terminal T&A Biometrica,ZKTECO,"267,24","347,40","348,42",21,32,0,0,0,0,2,34
+MB20-VL,,Terminal T&A Biometrica,ZKTECO,"114,20","148,50","178,20",21,6,0,0,3,0,2,11
+UA760,,Terminal T&A Biometrica,ZKTECO,"153,43","199,50","200,52",21,1,1,0,0,0,1,3
+MB20-VL-WiFi,,Terminal T&A Biometrica,ZKTECO,"124,20","158,50","188,20",21,1,0,0,1,1,0,3
+FaceDepot 4A,,Terminal T&A Biometrico,ZKTECO,"431,00","560,00","672,00",21,10,0,0,0,0,0,10
+Horus-TL2,,Terminal T&A Facial,ZKTECO,"139,50","181,40","217,70",21,400,6,0,0,0,6,412
+Horus-TL1,,Terminal T&A Facial,ZKTECO,"105,74","137,45","138,47",21,1,6,0,2,0,1,10
+EFace10,,Terminal T&A Facial,ZKTECO,"139,50","181,40","217,70",21,2,0,0,0,0,0,2
+Horus-E1,,Terminal T&A Facial,ZKTECO,"255,85","332,61","333,63",21,5,0,0,0,0,2,7
+Horus-E1RFID-M,,Terminal T&A Facial/ RFID,ZKTECO,"264,78","344,25","345,27",21,30,0,0,0,0,0,30
+iClock990-WiFi,,Terminal T&A FP,ZKTECO,"400,00","520,00","625,00",21,15,0,0,0,0,0,15
+iClock360-ID-ZMM200,,Terminal T&A FP,ZKTECO,"207,91","270,30","271,32",21,146,0,0,0,0,1,147
+iClock880-ID-ZMM200,,Terminal T&A FP,ZKTECO,"400,00","520,00","625,00",21,67,0,0,0,0,1,68
+K20-Pro,,Terminal T&A FP,ZKTECO,"139,50","181,40","217,70",21,130,9,0,0,2,22,163
+iClock580-ID-ZMM200,,Terminal T&A FP,ZKTECO,"251,18","326,57","327,59",21,2,0,0,0,0,0,2
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,TEMPERATURA,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+ProFaceX-TI-WiFi,,Asistencia y Temperatura,ZKTECO,"565,08","734,57","735,59",21,7,0,0,0,0,0,7
+ProfaceX-TD-WiFi,,Control AC T&A Facial,ZKTECO,"565,08","734,57","735,59",21,10,0,0,0,0,0,10
+SpeedFace-V5L-TD-WiFi,,Control Asistencia Facial,ZKTECO,"239,70","311,61","312,63",21,0,0,0,0,0,1,1
+TDM95E,,Modulo Sensor Temperatura,ZKTECO,"48,20","62,65","63,67",21,41,6,0,0,0,0,47
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,VEHICULAR,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+BGM1030R-LED,,Barrera 3m DER ZKTeco,ZKTECO,"899,50","1169,40","1403,00","10,5",0,0,0,0,0,0,0
+BGM1030L-LED,,Barrera 3m Izq ZKTeco,ZKTECO,"899,50","1169,40","1403,00","10,5",0,0,0,0,0,0,0
+PROBG3030L-LED,,Barrera 3m LED Izq ZKTeco,ZKTECO,"1631,90","2121,50","2545,80","10,5",3,0,0,0,0,0,3
+ProBG3030R,,Barrera 3mt Der ZKTeco,ZKTECO,"1589,50","2066,00","2479,70","10,5",2,0,0,0,0,0,2
+ProBG3045L-LED,,"Barrera 4,5m IZQ LED",ZKTECO,"1690,40","2197,60","2637,20","10,5",12,0,0,0,0,0,12
+CMP200-W,,Barrera Vehicular,ZKTECO,"424,49","876,20","1051,00","10,5",0,0,0,0,0,0,0
+CMP200-Y,,Barrera Vehicular,ZKTECO,"677,00","797,48","917,10","10,5",0,0,0,0,0,2,2
+ProBG3130L-LED,,Barrera vehicular 3M IZQ,ZKTECO,"1779,40","2313,30","2776,00","10,5",0,0,0,0,0,0,0
+ProBG3030L,,Barrera vehicular 3M IZQ,ZKTECO,"1589,50","2066,40","2479,00","10,5",3,0,0,0,0,0,3
+BG1030L,,Barrera vehicular 3m LED ,ZKTECO,"899,50","1169,40","1403,00","10,5",1,0,0,0,0,0,1
+ProBG3045R-LED,,Barrera vehicular 4.5 DER,ZKTECO,"1690,40","2197,60","2637,20","10,5",1,0,0,0,0,0,1
+BGM1045L,,Barrera vehicular 4.5 IZQ,ZKTECO,"899,50","1169,40","1403,00","10,5",1,0,0,0,0,0,1
+BG1045L,,Barrera vehicular 4.5 LED,ZKTECO,"899,50","1169,40","1403,00","10,5",0,0,0,0,0,0,0
+BGM1045R,,Barrera vehicular 4.5mt R,ZKTECO,"899,50","1169,00","1403,00","10,5",0,0,0,0,0,0,0
+BG1060L,,Barrera vehicular 6m,ZKTECO,"899,50","1169,00","1403,00","10,5",0,0,0,0,0,0,0
+BGM1060R,,Barrera vehicular 6m DER,ZKTECO,"899,50","1169,00","864,45","10,5",0,0,0,0,0,0,0
+BGM1060L,,Barrera vehicular 6m IZQ,ZKTECO,"899,50","1169,00","1403,00","10,5",1,0,0,0,0,0,1
+DS-TMG4B0-LA-3-OCT,,Barrera Vehicular Der 3M,HIKVISION,"567,00","872,00","1014,00",21,0,0,0,0,0,0,0
+ProBG3130R-LED,,Barrera vehicular DER 3mt,ZKTECO,"1779,40","2313,30","2776,00","10,5",9,0,0,0,0,1,10
+PROBG3030R-LED,,Barrera vehicular Derecha,ZKTECO,"1631,90","2121,50","2545,80","10,5",0,0,0,0,0,0,0
+BG-LCD100-R,,Barrera vehicular LCD DER,ZKTECO,"2311,30","3004,70","3605,70",21,6,0,0,0,0,0,6
+BG-LCD100-L,,Barrera vehicular LCD IZQ,ZKTECO,"2311,00","3004,70","3605,70","10,5",6,0,0,0,0,0,6
+PROBG-BOOM-130,,Boom Recto 3M Barrera,ZKTECO,"98,28","127,76","166,00",21,2,0,0,0,0,0,2
+BG-Boom-LED-300,,Brazo de 3M recto con L,ZKTECO,"139,00","162,00","190,00",21,0,0,0,0,0,0,0
+PROBG-BOOM-145,,"Brazo Recto 4,5m Barrera",ZKTECO,"113,00","139,00","155,00",21,0,0,0,0,0,0,0
+BGM-Boom-Tele-450,,Brazo Telescopico 4.5M,ZKTECO,"53,21","69,19","70,21",21,0,0,0,0,0,0,0
+CMP-Boom-Tele-450,,Brazo Telescopico 4.5m,ZKTECO,"53,21","69,19","70,21",21,2,0,0,0,0,0,2
+CMP-Boom-Tele-600,,Brazo Telescopico 6M,ZKTECO,"59,16","76,93","77,95",21,7,0,0,0,0,0,7
+BGM-Boom-Tele-600,,Brazo Telescopico 6m,ZKTECO,"59,16","76,93","77,95",21,2,0,0,0,0,0,2
+PSA03,,Cable LOOP Sensor,ZKTECO,"31,03","40,38","41,40",21,4,0,0,0,0,0,4
+DS-TMG023,,Coil for DS-TMG022,HIKVISION,"33,50","53,00","63,00",21,13,0,0,0,0,0,13
+DS-TMG022,,Coil Vehicle Detector,HIKVISION,"65,00","103,00","123,00","10,5",7,0,0,0,0,0,7
+UR20RW-F,,Enrolador Tarjetas ZKTeco,ZKTECO,"191,68","249,22","250,24","10,5",6,0,0,0,0,2,8
+DS-TMG035-ANTI-FALL,,Entrance & Exit Radar,HIKVISION,"208,00","334,00","418,00",21,34,0,0,0,0,0,34
+ZK-SW300DC,,Kit Puerta Abatible ZK,ZKTECO,"377,00","490,00","560,00","10,5",9,0,0,0,0,1,10
+Boom-130-LED,,Mástil barrera 3m LED,ZKTECO,"113,90","148,07","149,09",21,11,0,0,0,0,0,11
+ZK-SL800AC,,Operador Puerta Corrediza,ZKTECO,"235,00","306,00","353,00","10,5",49,0,0,0,0,1,50
+DS-TMG034,,Radar Barrera Vehicular,HIKVISION,"344,00","553,00","692,00","10,5",2,0,0,0,0,0,2
+VR10 Pro,,Radar/Sensor de Deteccion,ZKTECO,"157,00","204,09","205,11",21,182,7,0,0,0,5,194
+PSA02,,Sensor de Masa Metalica,ZKTECO,"50,32","65,45","66,47",21,0,0,0,0,0,1,1
+New UHF Waterproof  Tag,,Tag UHF a prueba de agua,ZKTECO,"1,36","1,79","2,81",21,2891,0,0,0,40,108,3039
+New UHF Parking Tag,,Tag UHF de largo alcance ,ZKTECO,"1,36","1,79","2,81",21,10,0,0,0,0,113,123
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,DAHUA,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+ASI1201A,,Central de control de acc,DAHUA,"53,10","53,10","53,10",21,0,1,0,0,0,0,1
+ASI1212A(V2),,Lector FP/RFID Standalone,DAHUA,"76,70","76,70","76,70",21,1,0,0,0,0,0,1
+ASR1201D,,Lector FP/RFID Standalone,DAHUA,"31,86","31,86","31,86",21,1,0,0,0,0,0,1
+ASI1212A-D(V2),,Lector Huella Tarj Autono,DAHUA,"76,70","76,70","76,70",21,3,4,0,0,0,1,8
+ASM100,,Lector registrador de tar,DAHUA,"59,00","59,00","59,00",21,35,17,0,0,0,8,60
+ASR1100B-D,,Lector RFID RS485,DAHUA,"38,94","38,94","38,94",21,0,4,0,0,0,0,4
+ASR1102A-D(V2),,Lector RFID/Huella RS485,DAHUA,"31,86","31,86","31,86",21,0,0,0,1,0,0,1
+ASR1101M-D,,Lector RFID/PIN RS485,DAHUA,"38,94","38,94","38,94",21,0,4,7,0,0,0,11
+ASR1201D-D,,Lector RFID/PIN RS485,DAHUA,"40,50","48,60","48,60",21,0,0,0,0,0,0,0
+ASM100-D,,Lector Tarjeta RFID USB,DAHUA,"59,00","59,00","59,00",21,55,20,0,0,0,6,81
+ASA2212A,,Terminal T&A RFID/FP/PIN,DAHUA,"76,70","76,70","76,70",21,3,0,0,0,0,0,3
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,CERRADURAS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+GL300-RIGHT,,Cerradura autónoma DER,ZKTECO,"134,98","175,44","176,46",21,12,3,0,0,1,0,16
+GL300-LEFT,,Cerradura Autonoma IZQ,ZKTECO,"134,98","175,44","176,46",21,31,2,0,0,0,1,34
+TL800,,Cerradura con visor,ZKTECO,"231,37","300,82","301,84",21,0,0,0,0,0,0,0
+IDLOCK-BIO,,Cerradura digital PIN/FP,CONTROL iD,"195,65","279,78","312,06",21,1,2,0,0,0,1,4
+ML200,,Cerradura FP / BT,ZKTECO,"74,38","96,73","97,75",21,3,2,0,0,1,0,6
+ML300,,Cerradura FP BT,ZKTECO,"124,00","162,00","194,00",21,89,2,0,0,1,2,94
+TL700,,Cerradura FP Timbre,ZKTECO,"125,29","162,86","163,88",21,0,0,0,1,0,0,1
+ZL700L-Inward,,Cerradura Hotel RFID,ZKTECO,"154,19","200,43","140,00",21,3,0,0,0,0,0,3
+ZL700L-Outward,,Cerradura Hotel RFID,ZKTECO,"154,19","200,43","201,45",21,3,0,0,0,0,0,3
+ZL700R-Inward,,Cerradura Hotel RFID,ZKTECO,"154,19","200,43","201,45",21,3,0,0,0,0,0,3
+ZL700R-Outward,,Cerradura Hotel RFID,ZKTECO,"154,19","200,43","201,45",21,3,0,0,0,0,0,3
+ZL400-L,,Cerradura Hotel Zigbee,ZKTECO,"134,98","175,44","176,46",21,4,0,0,0,0,0,4
+ZL400-R,,Cerradura Hotel ZigBee,ZKTECO,"134,98","175,44","176,46",21,3,0,0,0,0,0,3
+ZL500L-Outward,,Cerradura Inalámbrica APP,ZKTECO,"144,59","187,94","188,96",21,5,0,0,0,0,0,5
+ZL500R-Outward,,Cerradura Inalámbrica APP,ZKTECO,"144,59","187,94","188,96",21,4,1,0,0,0,0,5
+TL400B,,Cerradura Inteligente,ZKTECO,"214,00","278,90","334,00",21,3,2,0,0,0,0,5
+ZM100S,,Cerradura multibiométrica,ZKTECO,"371,79","483,31","484,33",21,1,1,0,0,0,1,3
+IDLOCK-SEN,,Cerradura PIN BLuethoot,CONTROL iD,"126,60","181,03","201,92",21,2,2,0,0,0,1,5
+ZL500L-Inward,,Cerradura por App,ZKTECO,"144,59","187,94","188,96",21,6,0,0,0,0,2,8
+ZL500R-Inward,,Cerradura por App,ZKTECO,"144,59","187,94","188,96",21,14,1,0,0,0,0,15
+TL300Z,,Cerradura ZigBee,ZKTECO,"221,68","288,15","289,17",21,5,3,0,0,0,1,9
+DL30Z,,Cerradura ZigBee App,ZKTECO,"115,69","150,37","151,39",21,26,4,0,1,0,2,33
+SLG200,,Gateway Cerradura,ZKTECO,"26,86","34,94","35,96","10,5",16,0,0,0,1,0,17
+SLG100,,Gateway Cerradura ZigBee,ZKTECO,"30,43","39,53","40,55","10,5",21,0,2,2,0,0,25
+RG4100,,Gateway Zig-Bee Cerradura,ZKTECO,"51,77","67,32","68,34",21,0,0,0,0,0,1,1
+SLG410,,Gateway Zigbee Cerradura,ZKTECO,"57,80","75,14","76,16","10,5",14,0,0,0,1,3,18
+ECL02,,Pestillo electrico locker,ZKTECO,"12,80","16,65","20,00",21,24,0,0,0,0,0,24
+TX02-Z03H,,Smart Zigbee Gateway,ZKTECO,"0,00","0,00","0,00",21,4,0,0,0,0,0,4
+SL01-T430H,,Wi-Fi Lock,ZKTECO,"134,60","175,00","210,00",21,22,0,0,2,0,0,24
+SL03-T420H,,Zigbee Lock ZKTeco,ZKTECO,"124,80","162,20","194,60",21,19,0,0,0,0,0,19
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,CONTROLADOR,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+EC10,,Control de Ascensores IP,ZKTECO,"236,30","307,19","308,21","10,5",11,0,0,0,0,2,13
+ATLAS-160,,Controladora 1 door,ZKTECO,"198,90","258,57","259,59","10,5",34,2,0,0,0,3,39
+ATLAS-260,,Controladora 2 door,ZKTECO,"260,10","338,13","339,15","10,5",36,1,0,0,0,2,39
+ATLAS-460,,Controladora 4P,ZKTECO,"321,30","417,69","418,71","10,5",13,2,0,0,0,1,16
+C3-400,,Controladora 4P ZKTeco,ZKTECO,"184,00","239,20","287,10","10,5",10,0,0,0,0,1,11
+INBIO-160Pro,,Controladora Biométrica,ZKTECO,"159,72","207,66","208,68","10,5",0,0,0,0,0,0,0
+INBIO-260Pro,,Controladora Biométrica,ZKTECO,"242,34","315,01","316,03","10,5",1,0,0,0,0,0,1
+INBIO-460Pro,,Controladora Biométrica,ZKTECO,"382,00","497,00","597,00","10,5",0,0,0,0,0,1,1
+INBIO-160,,Controladora Biométrica,ZKTECO,"125,29","162,86","163,88","10,5",16,0,0,0,0,1,17
+INBIO-260,,Controladora Biométrica,ZKTECO,"196,95","256,02","257,04","10,5",10,0,0,0,0,1,11
+INBIO-460,,Controladora Biométrica,ZKTECO,"268,52","349,10","350,12","10,5",10,1,1,0,0,1,13
+InBio160-B,,Controladora con Box,ZKTECO,"173,66","225,76","226,78","10,5",6,0,0,0,0,1,7
+InBio260-B,,Controladora con Box,ZKTECO,"241,66","314,16","315,18","10,5",3,0,0,0,0,1,4
+InBio460-B,,Controladora con Box,ZKTECO,"445,00","579,00","695,00","10,5",22,0,0,1,0,1,24
+INBIO-160PRO-B,,Controladora con Box,ZKTECO,"244,30","317,60","381,20","10,5",0,0,0,0,0,0,0
+INBIO-260PRO-B,,Controladora con Box,ZKTECO,"345,00","448,00","538,00","10,5",0,1,0,0,0,1,2
+INBIO-460PRO-B,,Controladora con Box,ZKTECO,"445,80","579,00","695,00","10,5",7,4,0,0,0,3,14
+ATLAS-100,,Controladora IP,ZKTECO,"153,00","198,90","199,92","10,5",7,2,0,0,0,1,10
+ATLAS-200,,Controladora IP,ZKTECO,"168,30","218,79","219,81","10,5",23,0,0,1,0,3,27
+ATLAS-400,,Controladora IP,ZKTECO,"198,90","258,57","259,59","10,5",4,0,0,0,0,1,5
+C3-100,,Controladora IP,ZKTECO,"100,80","131,10","157,40","10,5",61,0,0,0,0,2,63
+C3-200,,Controladora IP,ZKTECO,"141,10","183,50","220,20","10,5",38,0,0,0,0,10,48
+Lock Control Board,,Controladora para Locker,ZKTECO,"0,00","0,00","1,02",21,2,0,0,0,0,0,2
+WR485,,Convertirdor a Wiegand,ZKTECO,"8,25","10,71","11,73",21,224,0,0,0,0,4,228
+AUX485,,Modulo RS485 para C2-260,ZKTECO,"10,71","13,94","14,96",21,19,0,0,0,0,0,19
+DM10,,Placa de bloqueo,ZKTECO,"29,00","37,30","45,30",21,40,0,0,0,0,3,43
+EX16,,Placa expansión ascensor,ZKTECO,"75,99","98,77","99,79","10,5",15,0,0,0,0,1,16
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,DETECTOR METAL,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+MDS100,,Detector de Metales,ZKTECO,"4299,00","5589,00","6707,00",21,1,0,0,0,0,0,1
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,KITS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+DS-KAS321,,Face Recognition Terminal,HIKVISION,"112,00","161,00","181,00","10,5",34,0,0,2,0,1,37
+DS-KAS541,,Face Recognition Terminal,HIKVISION,"251,00","355,00","415,00","10,5",28,0,0,0,0,2,30
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,GARNET,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+PC-LINK-USB,,Interfaz PC-Link USB,GARNET,"19,90","19,90","19,90",21,2,0,0,0,0,0,2
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,AIR QUALITY,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+AQD-L100,,Sensor CO2 Ambiente,ZKTECO,"78,46","102,00","103,02","10,5",44,4,0,0,0,0,48
+AQD-V43,,Sensor CO2 Ambiente,ZKTECO,"117,05","152,15","153,17","10,5",42,2,0,0,0,0,44
+AQD-MINI,,Sensor CO2 Escritorio,ZKTECO,"53,72","69,87","70,89","10,5",41,1,0,0,0,0,42
+,,,,,,,,,,,,,,
+CONTROL DE ACCESO,,HIK ASISTENCIA,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+DS-K1A8503MF,,Terminal Asistencia FP,HIKVISION,"53,00","75,00","88,00",21,45,0,0,0,0,2,47

@@ -1,0 +1,47 @@
+,,,https://www.bigdipper.com.ar,,,info@bigdipper.com.ar,,,,,,,,
+"Lista de precios a la fecha: 25/11/2025 -- Precios unitarios expresados en dólares estadounidenses, sin IVA",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+ROBOTICA,,ROBOTS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+B2 Basic,,B2 Advanced quadruped rob,UNITREE,"72800,00","72800,00","999999,99",21,1,0,0,0,0,0,1
+GO2-EDU-U1,,Go2 Education - Research,UNITREE,"8600,00","8600,00","10300,00",21,1,0,0,0,0,0,1
+GO2-ENT-U2,,Go2 R multi-purpose robot,UNITREE,"32100,00","32100,00","35200,00",21,2,0,0,0,0,0,2
+GO2-EDU-U4,,Go2 Robot for dev W/LiDAR,UNITREE,"20300,00","20300,00","23345,00",21,0,0,0,0,0,0,0
+GO2-EDU-U2,,Go2 Robot for development,UNITREE,"11650,00","11650,00","14000,00",21,1,0,0,0,0,0,1
+GO2-ENT-U5,,Go2 Robot w/Thermal PTZ c,UNITREE,"29900,00","29900,00","32900,00",21,0,0,0,0,0,0,0
+G1 Edu U4,,Humanoid Robot G1 Edu U4 ,UNITREE,"77209,00","77209,00","77209,00",21,1,0,0,0,0,0,1
+G1,,Humanoid Robot Unitree G1,UNITREE,"28800,00","28800,00","31500,00",21,3,0,0,0,0,0,3
+Go1-EDU-EXPLORER2,,Inspection Robot for R&D ,UNITREE,"43059,40","56070,00","56070,00",21,0,0,0,0,0,0,0
+Go1-EDU-Basic,,Inspection Robot for R&D,UNITREE,"15040,00","16200,00","16200,00",21,0,0,0,0,0,0,0
+B1,,IP68 Industrial Robot,UNITREE,"102600,00","110500,00","110500,00",21,0,0,0,0,0,0,0
+Go1Pro,,Profesional Robot Dog,UNITREE,"2900,00","2900,00","2900,00",21,2,0,0,0,0,0,2
+Go2-ENT-U6,,Robot Dog Gas Inspection ,UNITREE,"13730,00","13730,00","16900,00",21,1,0,0,0,0,0,1
+Go2-PRO,,Robot Dog Profesional Uni,UNITREE,"5750,00","5750,00","5750,00",21,0,0,0,0,0,0,0
+GO2-W-U2,,Robot Dog w/wheels ,UNITREE,"18400,00","18400,00","18400,00",21,0,0,0,0,0,0,0
+G1-Edu-U6,,Robot Humanoide G1,UNITREE,"71850,00","71850,00","82627,50",21,0,0,0,0,0,0,0
+Go2Air,,Unitree Robot Dog,UNITREE,"3150,00","3150,00","3150,00",21,7,0,0,0,0,0,7
+H1 Robot,,Universal Humanoid Robot,UNITREE,"167000,00","167000,00","167000,00",21,1,0,0,0,0,0,1
+,,,,,,,,,,,,,,
+ROBOTICA,,OTROS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+G1 Battery,,Batería para G1,UNITREE,"840,00","840,00","966,00",21,1,0,0,0,0,0,1
+GO2-B-MOTOR,,Body motor for Go2,UNITREE,"0,00","0,00","0,00",21,1,0,0,0,0,0,1
+GO2-C-MOTOR,,Calf motor for Go2,UNITREE,"0,00","0,00","0,00",21,1,0,0,0,0,0,1
+GO2-Charging,,Fast Charging station Go2,UNITREE,"1390,00","1237,00","1850,00",21,2,0,0,0,0,0,2
+GO2-FOOT-PAD,,Go2 foot pad *4,UNITREE,"0,00","0,00","0,00",21,5,0,0,0,0,0,5
+Go1-BATT,,Spare Battery for Go1,UNITREE,"740,00","740,00","890,00",21,10,0,0,0,0,0,10
+GO2-T-MOTOR,,Thigh motor for Go2,UNITREE,"0,00","0,00","0,00",21,1,0,0,0,0,0,1
+,,,,,,,,,,,,,,
+ROBOTICA,,ACCESORIOS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+4D-LIDAR-L1,,Bionic 4D laser rada,UNITREE,"982,53","1071,85","1179,04",21,0,0,0,0,0,0,0
+4D-LIDAR-L2,,Bionic Lidar Radar ,UNITREE,"632,00","692,00","795,80",21,3,0,0,0,0,0,3
+D435i,,Depth Camera,INTEL,"1120,00","1120,00","1288,00",21,0,0,0,0,0,0,0
+RH56DFTP-2L,,G1 LEFT hand tactil sens,UNITREE,"11200,00","11200,00","12880,00",21,0,0,0,0,0,0,0
+G1-Prot-Frame,,G1 Protection Frame,UNITREE,"700,00","700,00","805,00",21,0,0,0,0,0,0,0
+RH56DFTP-2R,,G1 RIGHT hand tactil sens,UNITREE,"11200,00","11200,00","12880,00",21,0,0,0,0,0,0,0
+H1-Hands,,Hand for H1 Robot,UNITREE,"0,00","0,00","0,00",21,0,0,0,0,0,0,0
+BT2-06-Go2-LBAT,,Long range battery p/Go2,UNITREE,"899,00","899,00","990,00",21,11,0,0,0,0,0,11
+GX16-100T,,Orin Expansion Dock 100To,UNITREE,"3950,00","3950,00","4300,00",21,0,0,0,0,0,0,0
+NX16G-40,,Orin expansion dock 40Top,UNITREE,"1950,00","1950,00","2250,00",21,0,0,0,0,0,0,0
+SV1-25,,Stereo Binocular Camera,UNITREE,"750,00","750,00","800,00",21,0,0,0,0,0,0,0

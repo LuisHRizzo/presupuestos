@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conversor de archivos Excel (XLS/XLSX) a CSV. Convierte múltiples hojas en archivos CSV individuales de forma rápida y segura, directamente en tu navegador." />
+  <title>Conversor Excel → CSV | Multi-hoja</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/index.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="10" fill="url(#logo-grad)"/>
+              <path d="M12 14h16M12 20h16M12 26h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="40">
+                  <stop stop-color="#6366f1"/>
+                  <stop offset="1" stop-color="#06b6d4"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <h1>Conversor Excel</h1>
+            <span class="logo-subtitle">XLS/XLSX → CSV</span>
+          </div>
+        </div>
+        <div class="header-badge">
+          <span class="badge-dot"></span>
+          Procesamiento local
+        </div>
+      </div>
+      <div class="nav-tabs">
+        <button class="tab-btn active" data-tab="converter">Conversor</button>
+        <button class="tab-btn" data-tab="quote">Presupuesto</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Step 1: Upload -->
+      <section id="section-upload" class="section section-upload active">
+        <div class="section-header">
+          <span class="step-number">1</span>
+          <div>
+            <h2>Cargar archivo Excel</h2>
+            <p class="section-desc">Arrastrá o seleccioná un archivo .xls o .xlsx para comenzar</p>
+          </div>
+        </div>
+
+        <div id="drop-zone" class="drop-zone">
+          <div class="drop-zone-content">
+            <div class="drop-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="8" width="48" height="48" rx="12" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                <path d="M32 22v20M22 32h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="drop-text">Arrastrá tu archivo aquí</p>
+            <p class="drop-subtext">o hacé click para seleccionar</p>
+            <div class="drop-formats">
+              <span class="format-badge">.xls</span>
+              <span class="format-badge">.xlsx</span>
+            </div>
+          </div>
+          <input type="file" id="file-input" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden />
+        </div>
+
+        <!-- File Info (shown after upload) -->
+        <div id="file-info" class="file-info hidden">
+          <div class="file-info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+          </div>
+          <div class="file-info-details">
+            <span id="file-name" class="file-info-name">archivo.xlsx</span>
+            <span id="file-size" class="file-info-size">0 KB</span>
+          </div>
+          <button id="btn-remove-file" class="btn-icon" title="Quitar archivo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Step 2: Preview -->
+      <section id="section-preview" class="section section-preview hidden">
+        <div class="section-header">
+          <span class="step-number">2</span>
+          <div>
+            <h2>Archivo Listo para Importar</h2>
+            <p class="section-desc">El backend procesará automáticamente todas las hojas con listas de productos.</p>
+          </div>
+        </div>
+
+        <div id="sheets-list" class="sheets-list" style="display: none;">
+          <!-- Hidden since we don't select sheets manually anymore -->
+        </div>
+
+        <div class="actions-bar">
+          <button id="btn-convert" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <path d="M12 3v12M5 12l7 7 7-7"/>
+              <path d="M19 21H5"/>
+            </svg>
+            Importar a Base de Datos
+          </button>
+        </div>
+      </section>
+
+      <!-- Step 3: Progress / Results -->
+      <section id="section-results" class="section section-results hidden">
+        <div class="section-header">
+          <span class="step-number step-done">✓</span>
+          <div>
+            <h2>Conversión completada</h2>
+            <p id="results-summary" class="section-desc">Se generaron 0 archivos CSV</p>
+          </div>
+        </div>
+
+        <div id="results-list" class="results-list">
+          <!-- Dynamic content -->
+        </div>
+
+        <div class="actions-bar">
+          <button id="btn-download-zip" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Descargar todo (ZIP)
+          </button>
+          <button id="btn-new-conversion" class="btn btn-ghost btn-lg">
+            Nueva conversión
+          </button>
+        </div>
+      </section>
+
+      <section id="section-quote" class="section section-quote hidden">
+        <div class="quote-client">
+          <h3>Datos del Cliente</h3>
+          <div class="form-row">
+            <input type="text" id="client-name" placeholder="Nombre" />
+            <input type="text" id="client-cuit" placeholder="CUIT" />
+            <input type="text" id="client-address" placeholder="Dirección" />
+          </div>
+          <div class="form-row">
+            <input type="text" id="client-phone" placeholder="Teléfono" />
+            <input type="email" id="client-email" placeholder="Email" />
+          </div>
+        </div>
+        
+        <div class="quote-search">
+          <h3>Agregar Productos</h3>
+          <div class="search-input-wrapper">
+            <input type="text" id="product-search" placeholder="Buscar producto..." autocomplete="off" />
+            <div id="search-results" class="search-results hidden"></div>
+          </div>
+        </div>
+        
+        <div class="quote-items">
+          <table id="items-table">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Marca</th>
+                <th>Precio Unit.</th>
+                <th>IVA</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="items-body"></tbody>
+          </table>
+        </div>
+        
+        <div class="quote-totals">
+          <div class="total-row">
+            <span>Subtotal:</span>
+            <span id="total-subtotal">$0.00</span>
+          </div>
+          <div class="total-row">
+            <span>IVA (21%):</span>
+            <span id="total-iva">$0.00</span>
+          </div>
+          <div class="total-row total-final">
+            <span>Total:</span>
+            <span id="total-general">$0.00</span>
+          </div>
+        </div>
+        
+        <div class="quote-actions">
+          <button id="btn-generate-pdf" class="btn btn-primary">Generar PDF</button>
+          <button id="btn-clear-quote" class="btn btn-ghost">Limpiar</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Progress Overlay -->
+    <div id="progress-overlay" class="progress-overlay hidden">
+      <div class="progress-modal">
+        <div class="progress-spinner"></div>
+        <p class="progress-text">Procesando archivo...</p>
+        <div class="progress-bar-container">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <p id="progress-detail" class="progress-detail">Leyendo hojas...</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

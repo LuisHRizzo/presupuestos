@@ -1,0 +1,62 @@
+,,,https://www.bigdipper.com.ar,,,info@bigdipper.com.ar,,,,,,,,
+"Lista de precios a la fecha: 25/11/2025 -- Precios unitarios expresados en dólares estadounidenses, sin IVA",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+GESTION,,CONTROLADOR,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+ITRTSC-036B-HS,,Controlador de semaforos,DAHUA,"4130,00","4130,00","4130,00",21,2,0,0,0,0,0,2
+,,,,,,,,,,,,,,
+GESTION,,SERVIDORES VMS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+DSS7016DR-M,,Dahua Control Management ,DAHUA,"700,00","700,00","700,00",21,0,0,0,0,0,0,0
+DS-VD22D-BHW2-B,,Server DualSocket Rack,HIKVISION,"10331,50","13158,30","17544,40",21,0,0,0,0,0,0,0
+SIMOC-500,,VMS Server Cygnus,CYGNUS,"1220,24","1744,95","1946,29",21,1,0,0,0,0,0,1
+HikCentral-Workstation-64,,VMS Server Hikvision,HIKVISION,"3279,70","4275,30","5700,50",21,1,0,0,0,0,0,1
+,,,,,,,,,,,,,,
+GESTION,,OUTLET,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+NVS0104DH-4K,,Decoder 64Ch max 1xHDMI/v,DAHUA,"45,00","45,00","45,00","10,5",0,1,0,0,0,0,1
+,,,,,,,,,,,,,,
+GESTION,,DISPLAY,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+IPMPGI-1031,,Indoor Guidance Screen,DAHUA,"59,00","59,00","59,00",21,1,0,0,0,0,0,1
+ZD27-2K,,"Monitor FHD 27""",ZKTECO,"134,64","175,02","176,04",21,9,29,0,0,0,0,38
+ZD22-2K,,"Monitor LED FHD 22""",ZKTECO,"91,80","119,34","120,36",21,0,251,0,0,0,9,260
+DS-D4215MI-070H-B,,P1.5 Banner Display LED,HIKVISION,"6564,00","8359,00","11610,00",21,9,0,0,0,0,0,9
+,,,,,,,,,,,,,,
+GESTION,,DECODERS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+FB-HDMI4-C-NB,,Módulo de placa decoder 4,CYGNUS,"916,36","1097,46","1257,98","10,5",4,0,0,0,0,0,4
+FB-HDMI6-C-NB,,Módulo de placa decoder 6,CYGNUS,"1332,00","1593,77","1834,56","10,5",2,0,0,0,0,0,2
+HDMI1X16,,Spliter HDMI 1x16 4K,Marca Defecto,"0,00","0,00","0,00",21,2,0,0,0,0,0,2
+HDMI1X4,,Spliter HDMI 1x4  4K,Marca Defecto,"0,00","0,00","0,00",21,2,0,0,0,0,0,2
+HDMI1X10,,Splitter 4K HDMI 1X10,Marca Defecto,"0,00","0,00","0,00",21,2,0,0,0,0,0,2
+HDMI1X8,,Splitter 4K HDMI 1X8,CYGNUS,"0,00","0,00","0,00",21,2,0,0,0,0,0,2
+,,,,,,,,,,,,,,
+GESTION,,PANTALLAS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+LM24-B200S,,"Monitor LCD Dahua 24""",DAHUA,"136,00","148,00","148,00",21,0,0,1,2,0,0,3
+CY-MU4901H-4K,,Pantalla Video Wall 1080p,CYGNUS,"1135,00","1450,00","1550,00",21,21,0,0,0,0,0,21
+,,,,,,,,,,,,,,
+GESTION,,TECLADOS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+DS-1200KI,,Network Keyboard Hik,HIKVISION,"271,00","437,00","545,00",21,0,0,0,0,0,0,0
+DS-1105KI-B,,Network Keyboard Hik,HIKVISION,"678,00","1091,00","1364,00",21,2,0,0,0,0,0,2
+DS-1200KI-B,,Network Keyboard Hik,HIKVISION,"271,00","437,00","545,00",21,17,0,0,0,0,0,17
+DS-1100KI-C,,Network Keyboard Hik,HIKVISION,"778,00","1254,00","1567,00",21,0,0,0,0,0,0,0
+DS-1006KI-B,,Serial Keyboard HikVision,HIKVISION,"186,00","300,00","374,00",21,12,0,0,0,0,0,12
+NKB1000,,Teclado Dahua IP / RS485 ,DAHUA,"158,32","158,32","158,32",21,1,0,0,0,0,0,1
+DS-1005KI,,USB Keyboard HikVision,HIKVISION,"182,00","271,00","338,00",21,9,0,0,0,0,2,11
+,,,,,,,,,,,,,,
+GESTION,,OTROS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+DELL-LAT7430,,Notebook Dell Latitude 74,Marca Defecto,"1720,00","1720,00","1720,00",21,8,0,0,0,0,0,8
+,,,,,,,,,,,,,,
+GESTION,,,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+CY-4901H,,"Pantalla Video Wall 49"" ",CYGNUS,"1400,00","1600,00","1845,00",21,0,0,0,0,0,0,0
+CY-WS4x3-49,,Soporte de pared p/ VWALL,CYGNUS,"4277,04","5567,15","5995,08",21,3,0,0,0,0,0,3
+CY-WS3X2-49,,Soporte de pared para VWa,CYGNUS,"2137,50","2782,55","2997,54",21,4,0,0,0,0,0,4
+CY-WS3x3-49,,Soporte de pared para VWA,CYGNUS,"974,00","1140,00","1205,00",21,3,0,0,0,0,0,3
+CY-WS2X2-49,,Soporte de pared VWall 2x,CYGNUS,"399,74","571,63","637,59",21,6,0,0,0,0,0,6
+CY-W3x2-49,,Video Wall Cygnus 3 x 2 p,CYGNUS,"2,05","2,05","2,05",21,0,0,0,0,0,0,0
+CY-W4x3-49,,Video Wall Cygnus 4 x 3 p,CYGNUS,"2,05","2,05","2,05",21,0,0,0,0,0,0,0

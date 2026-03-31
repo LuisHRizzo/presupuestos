@@ -1,0 +1,26 @@
+,,,https://www.bigdipper.com.ar,,,info@bigdipper.com.ar,,,,,,,,
+"Lista de precios a la fecha: 25/11/2025 -- Precios unitarios expresados en dólares estadounidenses, sin IVA",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+STORAGE,,EVS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+EVS5016S-R-V2,,16HDD Hot Swap IPSAN,DAHUA,"2972,66","3864,46","4444,13",21,0,0,0,0,0,0,0
+EVS8224X,,24 HDD Storage IP SAN,DAHUA,"8300,00","11050,00","12700,00",21,0,0,0,0,0,0,0
+EVS5136S-S2,,36HDD Storage IPSAN,DAHUA,"5945,34","7728,94","8888,28",21,0,0,0,0,0,0,0
+EVS8248X,,48 HDD STORAGE IP SAN,DAHUA,"11370,00","15100,00","17400,00",21,1,0,0,0,0,0,1
+EVS5148S-S2,,48HDD Storage IPSAN,DAHUA,"13025,00","14875,00","15992,00",21,2,0,0,0,0,0,2
+,,,,,,,,,,,,,,
+STORAGE,,NAS SAS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+ESS2016X-J,,16HDD IPSAN Storage,DAHUA,"1792,94","2874,69","3206,38","10,5",1,0,0,0,0,0,1
+CY-ESS7016-J,,16HDD SAS Expansion,CYGNUS,"1130,00","1340,00","1545,00","10,5",2,0,0,0,0,0,2
+DS-AT1000S-360,,24HDD 360TB Storage,HIKVISION,"22156,10","28218,00","37624,00","10,5",0,0,0,0,0,0,0
+CY-ESS7008-J,,8HDD SAS Expansion,CYGNUS,"860,00","990,00","1190,00","10,5",2,0,0,0,0,0,2
+,,,,,,,,,,,,,,
+STORAGE,,HIKVISION,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+DS-A81024S,,ICVS 24HDD Storage,HIKVISION,"6082,00","9795,00","12245,00","10,5",0,0,0,0,0,0,0
+DS-AT1000S-500-25T,,Storage 500TB HikVision,HIKVISION,"35240,00","44881,00","62335,00",21,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,
+STORAGE,,ACCESORIOS,,,,,,,,,,,,
+Código,Imagen Ref.,Descripción,Marca,Partner,Gremio,PMP,IVA %,Stk G. Rodriguez,Stk Ituzaingó,Stk Beccar,Stk Lanús,Stk Mendoza,Stk Almagro,Total
+PCI-10G,,Modulo PCIe DualFiber,Marca Defecto,"120,00","120,00","120,00",21,5,0,0,0,0,0,5
