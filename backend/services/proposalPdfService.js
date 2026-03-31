@@ -1,4 +1,5 @@
-import { jsPDF } from 'jspdf';
+import jsPDFModule from 'jspdf';
+const jsPDF = jsPDFModule.jsPDF || jsPDFModule.default;
 import autoTable from 'jspdf-autotable';
 
 export function generateProposalPDF(data) {
