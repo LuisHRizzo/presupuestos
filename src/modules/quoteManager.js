@@ -259,8 +259,9 @@ function getQuoteItems() {
 }
 
 function getQuoteItemsWithMarkup() {
+  const currentMarkup = parseFloat(document.getElementById('markup-percent')?.value || '0');
   return quoteItems.map(item => {
-    const precioConMarkup = item.precioUnit * (1 + markupPercent / 100);
+    const precioConMarkup = item.precioUnit * (1 + currentMarkup / 100);
     const ivaAmount = precioConMarkup * IVA_RATE;
     return {
       ...item,
