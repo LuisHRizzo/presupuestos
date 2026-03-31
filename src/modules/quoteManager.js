@@ -223,6 +223,10 @@ function generatePDF() {
     return;
   }
   
+  const itemsConMarkup = getQuoteItemsWithMarkup();
+  console.log('=== GENERATE PDF (quoteManager) ===');
+  console.log('items:', JSON.stringify(itemsConMarkup, null, 2));
+  
   const client = {
     nombre: document.getElementById('client-name').value || '-',
     cuit: document.getElementById('client-cuit').value || '-',
@@ -230,11 +234,11 @@ function generatePDF() {
     telefono: document.getElementById('client-phone').value || '-',
     email: document.getElementById('client-email').value || '-'
   };
-  
+
   fetch('http://localhost:3001/api/quote/generate-pdf', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ items: quoteItems, client })
+    body: JSON.stringify({ items: itemsConMarkup, client })
   })
   .then(res => {
     if (!res.ok) throw new Error('Error al generar PDF');
@@ -259,10 +263,14 @@ function getQuoteItems() {
 }
 
 function getQuoteItemsWithMarkup() {
-  const currentMarkup = parseFloat(document.getElementById('markup-percent')?.value || '0');
+  const markupInput = document.getElementById('markup-percent');
+  const currentMarkup = markupInput ? (parseFloat(markupInput.value) || 0) : 0;
+  console.log('=== getQuoteItemsWithMarkup ===');
+  console.log('markup from input:', currentMarkup);
   return quoteItems.map(item => {
     const precioConMarkup = item.precioUnit * (1 + currentMarkup / 100);
     const ivaAmount = precioConMarkup * IVA_RATE;
+    console.log('Item:', item.descripcion, 'Original:', item.precioUnit, 'Con Markup:', precioConMarkup);
     return {
       ...item,
       precioUnit: precioConMarkup,

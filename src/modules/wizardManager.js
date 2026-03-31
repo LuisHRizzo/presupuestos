@@ -82,6 +82,9 @@ async function generateProposal() {
   }
   
   const quoteItems = getQuoteItemsWithMarkup();
+  console.log('=== GENERATE PROPOSAL ===');
+  console.log('quoteItems:', JSON.stringify(quoteItems, null, 2));
+  console.log('markup input value:', document.getElementById('markup-percent').value);
   
   // Recalculate totals with markup
   let subtotal = 0;

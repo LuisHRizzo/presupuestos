@@ -46,7 +46,7 @@ Usa un tono profesional, orientado a ventas. El contenido debe ser detallado per
 `;
 
   try {
-    const model = genAI.getModel('gemini-2.0-flash');
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
     
     const result = await model.generateContent(prompt);
     const response = await result.response;
