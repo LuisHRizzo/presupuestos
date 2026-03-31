@@ -1,9 +1,47 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyBYWIKfjBNauhjUZ6QXKTw-fhyLv49b-cA';
-const genAI = new GoogleGenerativeAI(API_KEY);
+const API_KEY = process.env.GEMINI_API_KEY;
+const genAI = API_KEY ? new GoogleGenerativeAI(API_KEY) : null;
+
+function generateFallbackContent(data) {
+  const { project, scope, outOfScope, solution, totals } = data;
+  
+  return `
+## Resumen Ejecutivo
+
+Presentamos nuestra propuesta comercial para el proyecto "${project.name || 'Sin nombre'}", diseñada para cumplir con los objetivos establecidos y entregar una solución técnica de alta calidad.
+
+## Descripción de la Solución
+
+${solution || 'Se propone una solución integral adaptada a las necesidades del proyecto.'}
+
+## Beneficios Principales
+
+- **Profesionalismo**: Equipo técnico especializado con experiencia comprovada
+- **Soporte continuo**: Asistencia técnica durante y después de la implementación
+- **Garantía**: Cobertura de garantía sobre todos los componentes instalados
+- **Escalabilidad**: Sistema diseñado para adaptarse a futuras expansión
+
+## Alcances del Proyecto
+
+${scope || 'No especificados'}
+
+## Fuera de Alcances
+
+${outOfScope || 'No especificado'}
+
+---
+*Propuesta elaborada el ${new Date().toLocaleDateString('es-AR')}*
+*Total propuesta: ${totals.total}*
+`;
+}
 
 export async function generateProposalContent(data) {
+  // If no API key, return fallback content
+  if (!genAI) {
+    return generateFallbackContent(data);
+  }
+  
   const { project, scope, outOfScope, solution, items, totals } = data;
   
   const itemsList = items.map(item => 
@@ -53,7 +91,8 @@ Usa un tono profesional, orientado a ventas. El contenido debe ser detallado per
     
     return response.text();
   } catch (error) {
-    console.error('Error calling Gemini API:', error);
-    throw new Error('Error al generar contenido con IA: ' + error.message);
+    console.error('Error calling Gemini API:', error.message);
+    // Return fallback content on error
+    return generateFallbackContent(data);
   }
 }
