@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import multer from 'multer';
+import 'dotenv/config';
 import { processImport } from './controllers/importController.js';
 import { searchProducts } from './controllers/quoteController.js';
 import { generateQuotePDF } from './services/pdfService.js';
