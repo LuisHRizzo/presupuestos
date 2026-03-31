@@ -6,6 +6,7 @@
 import './styles/index.css';
 import { initFileHandler } from './modules/fileHandler.js';
 import { initQuoteManager } from './modules/quoteManager.js';
+import { initWizardManager } from './modules/wizardManager.js';
 import {
   cacheDomElements,
   getDom,
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dom = cacheDomElements();
 
   initQuoteManager();
+  initWizardManager();
 
   // Initialize file handler (drag & drop + input)
   initFileHandler({

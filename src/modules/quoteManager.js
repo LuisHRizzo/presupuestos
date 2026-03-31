@@ -4,6 +4,7 @@ import { showToast } from './uiManager.js';
 const IVA_RATE = 0.21;
 
 let quoteItems = [];
+let markupPercent = 0;
 
 export function initQuoteManager() {
   const dom = getDom();
@@ -11,6 +12,14 @@ export function initQuoteManager() {
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', handleTabSwitch);
   });
+  
+  const markupInput = document.getElementById('markup-percent');
+  if (markupInput) {
+    markupInput.addEventListener('input', (e) => {
+      markupPercent = parseFloat(e.target.value) || 0;
+      renderQuoteItems();
+    });
+  }
   
   const searchInput = document.getElementById('product-search');
   const searchResults = document.getElementById('search-results');
@@ -37,6 +46,8 @@ export function initQuoteManager() {
   document.getElementById('btn-generate-pdf').addEventListener('click', generatePDF);
   
   document.getElementById('btn-clear-quote').addEventListener('click', clearQuote);
+  
+  document.getElementById('btn-add-service').addEventListener('click', addService);
 }
 
 function handleTabSwitch(e) {
@@ -106,19 +117,52 @@ function addProductToQuote(product) {
   renderQuoteItems();
 }
 
+function addService() {
+  const desc = document.getElementById('service-desc').value.trim();
+  const price = parseFloat(document.getElementById('service-price').value) || 0;
+  const qty = parseInt(document.getElementById('service-qty').value) || 1;
+  
+  if (!desc || price <= 0) {
+    showToast('Ingrese descripción y precio válido', 'warning');
+    return;
+  }
+  
+  quoteItems.push({
+    id: Date.now(),
+    codigo: 'SERVICIO',
+    descripcion: desc,
+    marca: '-',
+    quantity: qty,
+    precioUnit: price,
+    ivaAmount: price * IVA_RATE,
+    isService: true
+  });
+  
+  document.getElementById('service-desc').value = '';
+  document.getElementById('service-price').value = '';
+  document.getElementById('service-qty').value = '1';
+  
+  renderQuoteItems();
+  showToast('Servicio agregado', 'success');
+}
+
 function renderQuoteItems() {
   const tbody = document.getElementById('items-body');
   tbody.innerHTML = '';
   
   quoteItems.forEach((item, index) => {
-    const subtotal = (item.precioUnit + item.ivaAmount) * item.quantity;
+    const precioConMarkup = item.precioUnit * (1 + markupPercent / 100);
+    const ivaAmount = precioConMarkup * IVA_RATE;
+    const subtotal = (precioConMarkup + ivaAmount) * item.quantity;
+    
     const tr = document.createElement('tr');
+    tr.className = item.isService ? 'service-row' : '';
     tr.innerHTML = `
       <td>${item.codigo}</td>
       <td>${item.descripcion}</td>
       <td>${item.marca || '-'}</td>
-      <td>$${item.precioUnit.toFixed(2)}</td>
-      <td>$${item.ivaAmount.toFixed(2)}</td>
+      <td>$${precioConMarkup.toFixed(2)}</td>
+      <td>$${ivaAmount.toFixed(2)}</td>
       <td><input type="number" min="1" value="${item.quantity}" data-index="${index}" class="qty-input" /></td>
       <td>$${subtotal.toFixed(2)}</td>
       <td><button class="btn-remove" data-index="${index}">&times;</button></td>
@@ -150,8 +194,10 @@ function updateTotals() {
   let totalIva = 0;
   
   quoteItems.forEach(item => {
-    subtotal += item.precioUnit * item.quantity;
-    totalIva += item.ivaAmount * item.quantity;
+    const precioConMarkup = item.precioUnit * (1 + markupPercent / 100);
+    const ivaAmount = precioConMarkup * IVA_RATE;
+    subtotal += precioConMarkup * item.quantity;
+    totalIva += ivaAmount * item.quantity;
   });
   
   const total = subtotal + totalIva;
@@ -208,4 +254,8 @@ function generatePDF() {
   });
 }
 
-export { quoteItems, IVA_RATE };
+function getQuoteItems() {
+  return quoteItems;
+}
+
+export { quoteItems, IVA_RATE, markupPercent, getQuoteItems };

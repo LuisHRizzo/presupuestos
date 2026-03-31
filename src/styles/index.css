@@ -1260,3 +1260,157 @@ body::before {
   .quote-actions .btn {
     padding: 0.75rem 1.5rem;
   }
+
+  .markup-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: var(--color-bg-secondary);
+    border-radius: 6px;
+    max-width: 250px;
+  }
+
+  .markup-input label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+  }
+
+  .markup-input input {
+    width: 80px;
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+    font-family: var(--font-family);
+  }
+
+  .markup-input input:focus {
+    outline: none;
+    border-color: var(--color-accent-primary);
+  }
+
+  .service-input {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--color-bg-secondary);
+    border-radius: 8px;
+  }
+
+  .service-input h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+  }
+
+  .service-row {
+    background: rgba(99, 102, 241, 0.1);
+  }
+
+  .service-row td:first-child::before {
+    content: '🔧 ';
+  }
+
+  /* Wizard de Propuesta */
+  .section-wizard {
+    padding: 2rem;
+  }
+
+  .wizard-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .wizard-step {
+    padding: 0.75rem 1rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+  }
+
+  .wizard-step.active {
+    color: var(--color-accent-primary);
+    border-bottom: 2px solid var(--color-accent-primary);
+    margin-bottom: -2px;
+  }
+
+  .wizard-step.completed {
+    color: var(--color-success);
+  }
+
+  .wizard-panel {
+    padding: 1rem 0;
+  }
+
+  .wizard-panel h3 {
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+  }
+
+  .wizard-panel input[type="text"],
+  .wizard-panel textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+  }
+
+  .wizard-panel input[type="text"]:focus,
+  .wizard-panel textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-primary);
+  }
+
+  .review-totals-box {
+    padding: 1.5rem;
+    background: var(--color-bg-secondary);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .review-totals-box p {
+    margin: 0.5rem 0;
+    color: var(--color-text-secondary);
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    margin-top: 1rem;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-accent-primary);
+  }
+
+  .wizard-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .btn-secondary {
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-bg-card-hover);
+    border-color: var(--color-border-hover);
+  }

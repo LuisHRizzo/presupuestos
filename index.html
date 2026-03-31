@@ -171,6 +171,16 @@
           </div>
         </div>
         
+        <div class="service-input">
+          <h4>Agregar Servicio</h4>
+          <div class="form-row">
+            <input type="text" id="service-desc" placeholder="Descripción del servicio" />
+            <input type="number" id="service-price" placeholder="Precio unit." />
+            <input type="number" id="service-qty" placeholder="Cantidad" value="1" min="1" />
+            <button id="btn-add-service" class="btn btn-secondary">Agregar</button>
+          </div>
+        </div>
+        
         <div class="quote-items">
           <table id="items-table">
             <thead>
@@ -204,9 +214,64 @@
           </div>
         </div>
         
+        <div class="markup-input">
+          <label for="markup-percent">Markup (%): </label>
+          <input type="number" id="markup-percent" value="0" min="0" max="100" />
+        </div>
+        
         <div class="quote-actions">
           <button id="btn-generate-pdf" class="btn btn-primary">Generar PDF</button>
+          <button id="btn-start-wizard" class="btn btn-secondary">Crear Propuesta</button>
           <button id="btn-clear-quote" class="btn btn-ghost">Limpiar</button>
+        </div>
+      </section>
+
+      <!-- Wizard de Propuesta Comercial -->
+      <section id="section-wizard" class="section section-wizard hidden">
+        <div class="wizard-steps">
+          <div class="wizard-step active" data-step="1">1. Proyecto</div>
+          <div class="wizard-step" data-step="2">2. Alcances</div>
+          <div class="wizard-step" data-step="3">3. Fuera de Alcances</div>
+          <div class="wizard-step" data-step="4">4. Solución</div>
+          <div class="wizard-step" data-step="5">5. Revisión</div>
+        </div>
+        
+        <div class="wizard-content">
+          <div class="wizard-panel" data-step="1">
+            <h3>Datos del Proyecto</h3>
+            <input type="text" id="project-name" placeholder="Nombre del proyecto" />
+            <textarea id="project-desc" placeholder="Descripción breve del proyecto" rows="4"></textarea>
+          </div>
+          
+          <div class="wizard-panel hidden" data-step="2">
+            <h3>Alcances del Proyecto</h3>
+            <textarea id="project-scope" placeholder="¿Qué incluye el proyecto?" rows="6"></textarea>
+          </div>
+          
+          <div class="wizard-panel hidden" data-step="3">
+            <h3>Fuera de Alcances</h3>
+            <textarea id="project-out-of-scope" placeholder="¿Qué NO incluye el proyecto?" rows="6"></textarea>
+          </div>
+          
+          <div class="wizard-panel hidden" data-step="4">
+            <h3>Solución Técnica</h3>
+            <textarea id="project-solution" placeholder="Describe la solución propuesta" rows="6"></textarea>
+          </div>
+          
+          <div class="wizard-panel hidden" data-step="5">
+            <h3>Revisión de Totales</h3>
+            <div id="review-totals"></div>
+            <label class="checkbox-label">
+              <input type="checkbox" id="confirm-totals" />
+              Confirmo que los totales son correctos
+            </label>
+          </div>
+        </div>
+        
+        <div class="wizard-nav">
+          <button id="btn-wizard-prev" class="btn btn-ghost" disabled>Atrás</button>
+          <button id="btn-wizard-next" class="btn btn-primary">Siguiente</button>
+          <button id="btn-generate-proposal" class="btn btn-primary hidden">Generar Propuesta</button>
         </div>
       </section>
     </main>

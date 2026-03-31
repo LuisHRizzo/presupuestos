@@ -64,3 +64,127 @@ export function generateQuotePDF(data) {
   
   return Buffer.from(doc.output('arraybuffer'));
 }
+
+export function generateProposalPDF(data) {
+  const { project, scope, outOfScope, solution, items, totals } = data;
+  const today = new Date().toLocaleDateString('es-AR');
+  const proposalNumber = `PROP-${Date.now().toString().slice(-6)}`;
+  
+  const doc = new jsPDF();
+  let y = 20;
+  
+  doc.setFontSize(20);
+  doc.text('PROPUESTA COMERCIAL', 105, y, { align: 'center' });
+  y += 10;
+  
+  doc.setFontSize(12);
+  doc.text(`N°: ${proposalNumber}`, 105, y, { align: 'center' });
+  y += 6;
+  doc.text(`Fecha: ${today}`, 105, y, { align: 'center' });
+  y += 15;
+  
+  doc.setFontSize(14);
+  doc.text('Datos del Proyecto', 14, y);
+  y += 8;
+  doc.setFontSize(11);
+  doc.text(`Nombre: ${project.name}`, 14, y);
+  y += 6;
+  if (project.description) {
+    const descLines = doc.splitTextToSize(project.description, 180);
+    doc.text(descLines, 14, y);
+    y += descLines.length * 5 + 5;
+  }
+  
+  doc.setFontSize(14);
+  doc.text('Alcances del Proyecto', 14, y);
+  y += 8;
+  doc.setFontSize(10);
+  if (scope) {
+    const scopeLines = doc.splitTextToSize(scope, 180);
+    doc.text(scopeLines, 14, y);
+    y += scopeLines.length * 5 + 5;
+  } else {
+    doc.text('No se especificaron alcances', 14, y);
+    y += 10;
+  }
+  
+  if (y > 250) {
+    doc.addPage();
+    y = 20;
+  }
+  
+  doc.setFontSize(14);
+  doc.text('Fuera de Alcances', 14, y);
+  y += 8;
+  doc.setFontSize(10);
+  if (outOfScope) {
+    const outLines = doc.splitTextToSize(outOfScope, 180);
+    doc.text(outLines, 14, y);
+    y += outLines.length * 5 + 5;
+  } else {
+    doc.text('No se especificaron exclusiones', 14, y);
+    y += 10;
+  }
+  
+  if (y > 250) {
+    doc.addPage();
+    y = 20;
+  }
+  
+  doc.setFontSize(14);
+  doc.text('Solución Propuesta', 14, y);
+  y += 8;
+  doc.setFontSize(10);
+  if (solution) {
+    const solLines = doc.splitTextToSize(solution, 180);
+    doc.text(solLines, 14, y);
+    y += solLines.length * 5 + 10;
+  } else {
+    doc.text('No se especificó solución', 14, y);
+    y += 10;
+  }
+  
+  if (y > 230) {
+    doc.addPage();
+    y = 20;
+  }
+  
+  doc.setFontSize(14);
+  doc.text('Detalle de Items', 14, y);
+  y += 8;
+  
+  const tableData = items.map(item => [
+    item.codigo,
+    item.descripcion.substring(0, 25) + (item.descripcion.length > 25 ? '...' : ''),
+    item.quantity,
+    `$${item.precioUnit.toFixed(2)}`,
+    `$${((item.precioUnit + item.ivaAmount) * item.quantity).toFixed(2)}`
+  ]);
+  
+  autoTable(doc, {
+    startY: y,
+    head: [['Código', 'Descripción', 'Cant', 'Precio Unit.', 'Subtotal']],
+    body: tableData,
+    theme: 'striped',
+    headStyles: { fillColor: [99, 102, 241] },
+    fontSize: 9
+  });
+  
+  y = doc.lastAutoTable.finalY + 15;
+  
+  doc.setFontSize(12);
+  doc.text('Resumen de Totales', 14, y);
+  y += 8;
+  doc.setFontSize(11);
+  doc.text(`Subtotal: ${totals.subtotal}`, 140, y);
+  y += 6;
+  doc.text(`IVA: ${totals.iva}`, 140, y);
+  y += 8;
+  doc.setFontSize(14);
+  doc.text(`TOTAL: ${totals.total}`, 140, y);
+  
+  doc.setFontSize(8);
+  doc.text('Propuesta válida por 30 días', 105, 280, { align: 'center' });
+  
+  return Buffer.from(doc.output('arraybuffer'));
+}
