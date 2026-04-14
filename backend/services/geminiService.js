@@ -54,9 +54,9 @@ ${outOfScope || 'No especificado'}
 async function getAIResponse(prompt, data) {
   // Nombres de modelos actualizados para máxima compatibilidad
   const modelTierList = [
-    'gemini-1.5-pro-latest',   // El más estable y potente para lógica compleja
-    'gemini-1.5-flash-latest', // El balance perfecto entre velocidad y costo
-    'gemini-2.0-flash'         // Opción moderna de alta disponibilidad
+    'gemini-2.5-flash',       // Opción A: Rápido y capaz (El que usabas originalmente)
+    'gemini-2.5-flash-lite',  // Opción B: Súper ligero, altísima disponibilidad (salvavidas para el 503)
+    'gemini-2.5-pro'          // Opción C: El más potente, pero con límite de 100 requests/día en Free Tier
   ];
 
   for (const modelName of modelTierList) {
