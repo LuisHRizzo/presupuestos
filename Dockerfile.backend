@@ -5,7 +5,7 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Instalar dependencias primero (aprovecha cache de Docker)
+# Instalar dependencias (aprovecha cache de Docker)
 COPY backend/package*.json ./
 RUN npm install
 
@@ -19,14 +19,11 @@ COPY backend/controllers ./controllers
 COPY backend/services ./services
 COPY backend/seed.mjs ./seed.mjs
 
-# Script de arranque
-COPY backend/entrypoint.sh ./entrypoint.sh
-# Eliminar CRLF de Windows para que Alpine Linux pueda ejecutar el script
-RUN sed -i 's/\r//' ./entrypoint.sh && chmod +x ./entrypoint.sh
-
 # La DB SQLite vive en un volumen montado en /app/data
 ENV DATABASE_URL="file:/app/data/prod.db"
 
 EXPOSE 3001
 
-ENTRYPOINT ["./entrypoint.sh"]
+# Inline startup: sin archivos de shell externos (evita problemas de CRLF)
+# 1. Aplica schema a la DB  2. Seed de servicios  3. Arranca el servidor
+CMD ["sh", "-c", "npx prisma db push --schema=./prisma/schema.prisma --skip-generate --accept-data-loss && node seed.mjs && node server.js"]

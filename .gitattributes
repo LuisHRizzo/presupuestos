@@ -1,0 +1,11 @@
+# Forzar LF en todos los archivos de texto para evitar CRLF en Linux
+* text=auto eol=lf
+
+# Binarios — no tocar
+*.png binary
+*.jpg binary
+*.ico binary
+*.db  binary
+*.pdf binary
+*.xlsx binary
+*.xls  binary
