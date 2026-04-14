@@ -3,23 +3,25 @@ version: '3.8'
 # ─────────────────────────────────────────────────────────
 # IOTEC / 01Infinito — Sistema de Cotización Ágil
 #
-# Arranque:
-#   docker compose up --build        (primera vez)
-#   docker compose up -d             (siguientes veces)
-#   docker compose down              (apagar todo)
-#   docker compose logs -f backend   (ver logs del backend)
+# NOTA para Coolify:
+#   Los puertos NO se mapean aquí — Coolify los gestiona
+#   automáticamente con Traefik. Configurar el puerto en
+#   la UI de Coolify apuntando al servicio "frontend" port 80.
+#
+# Arranque local (sin Coolify):
+#   docker compose up --build
+#   → frontend en http://localhost:3000
+#   → backend  en http://localhost:3001
 # ─────────────────────────────────────────────────────────
 
 services:
 
-  # ── Backend ────────────────────────────────────────────
+  # ── Backend — Node.js + Prisma + SQLite ───────────────
   backend:
     build:
       context: .
       dockerfile: Dockerfile.backend
     container_name: iotec-backend
-    ports:
-      - "3001:3001"
     environment:
       DATABASE_URL: "file:/app/data/prod.db"
       GEMINI_API_KEY: "${GEMINI_API_KEY:-}"
@@ -27,24 +29,26 @@ services:
     volumes:
       - db-data:/app/data
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3001/health"]
+      test: ["CMD-SHELL", "curl -f http://localhost:3001/health || exit 1"]
       interval: 20s
       timeout: 10s
-      retries: 10
+      retries: 5
       start_period: 90s
     restart: unless-stopped
+    expose:
+      - "3001"
 
-  # ── Frontend ───────────────────────────────────────────
+  # ── Frontend — Nginx sirviendo Vite build ─────────────
   frontend:
     build:
       context: .
       dockerfile: Dockerfile.frontend
     container_name: iotec-frontend
-    ports:
-      - "3000:80"
     depends_on:
-      - backend         # Solo espera que el contenedor arranque, no que sea healthy
+      - backend
     restart: unless-stopped
+    expose:
+      - "80"
 
 # ── Volumen para la DB SQLite ──────────────────────────
 volumes:
