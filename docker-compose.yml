@@ -44,11 +44,11 @@ services:
     volumes:
       - db-data:/app/data   # Persistencia de la base de datos SQLite
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3001/api/services"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD", "wget", "-qO-", "http://localhost:3001/health"]
+      interval: 15s
+      timeout: 10s
       retries: 5
-      start_period: 15s
+      start_period: 60s
     restart: unless-stopped
 
 # ── Volumen para la DB SQLite ──────────────────────────

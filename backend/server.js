@@ -20,6 +20,10 @@ app.use(express.json());
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
+// ─── Health check (para Docker/Coolify) ────────────────
+app.get('/health', (req, res) => res.json({ status: 'ok', ts: Date.now() }));
+
+
 // ─── PRODUCTOS / CATÁLOGO ───────────────────────
 app.post('/api/upload', upload.single('file'), async (req, res) => {
   if (!req.file) return res.status(400).json({ error: 'No se subió ningún archivo' });

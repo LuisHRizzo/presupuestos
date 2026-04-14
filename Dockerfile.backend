@@ -19,9 +19,10 @@ COPY backend/controllers ./controllers
 COPY backend/services ./services
 COPY backend/seed.mjs ./seed.mjs
 
-# Script de arranque: aplica schema a la DB y luego levanta el servidor
+# Script de arranque
 COPY backend/entrypoint.sh ./entrypoint.sh
-RUN chmod +x ./entrypoint.sh
+# Eliminar CRLF de Windows para que Alpine Linux pueda ejecutar el script
+RUN sed -i 's/\r//' ./entrypoint.sh && chmod +x ./entrypoint.sh
 
 # La DB SQLite vive en un volumen montado en /app/data
 ENV DATABASE_URL="file:/app/data/prod.db"
