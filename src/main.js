@@ -102,7 +102,8 @@ async function handleConvert() {
 
     updateProgress(40, 'Procesando en la Base de Datos...');
 
-    const response = await fetch('http://localhost:3001/api/upload', {
+    const apiBase = import.meta.env.VITE_API_URL ?? '';
+    const response = await fetch(`${apiBase}/api/upload`, {
       method: 'POST',
       body: formData
     });

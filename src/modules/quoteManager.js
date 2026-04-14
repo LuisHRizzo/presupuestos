@@ -2,7 +2,7 @@ import { getDom } from './uiManager.js';
 import { showToast } from './uiManager.js';
 
 const IVA_RATE = 0.21;
-const API      = 'http://localhost:3001';
+const API      = import.meta.env.VITE_API_URL ?? '';
 
 let quoteItems        = [];
 let markupIOTEC       = 30;  // % margen IOTEC (oculto al cliente)

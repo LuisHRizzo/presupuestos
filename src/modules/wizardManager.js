@@ -1,7 +1,7 @@
 import { showToast } from './uiManager.js';
 import { getQuoteItems, getQuoteItemsForExport, getTotals } from './quoteManager.js';
 
-const API        = 'http://localhost:3001';
+const API        = import.meta.env.VITE_API_URL ?? '';
 let currentStep  = 1;
 const totalSteps = 5;
 let modalidad    = 'IOTEC'; // default
