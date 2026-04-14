@@ -47,36 +47,53 @@ ${outOfScope || 'No especificado'}
 `;
 }
 
-// Jerarquía de modelos con fallback automático por saturación
+/**
+ * Jerarquía de modelos con fallback inteligente.
+ * Si un modelo no existe (404) o está saturado (503/429), salta al siguiente.
+ */
 async function getAIResponse(prompt, data) {
+  // Nombres de modelos actualizados para máxima compatibilidad
   const modelTierList = [
-    'gemini-3.1-pro',        // Opción A: Máxima inteligencia
-    'gemini-3.1-flash-lite'  // Opción B: Más ligero y con mayor disponibilidad
+    'gemini-1.5-pro-latest',   // El más estable y potente para lógica compleja
+    'gemini-1.5-flash-latest', // El balance perfecto entre velocidad y costo
+    'gemini-2.0-flash'         // Opción moderna de alta disponibilidad
   ];
 
   for (const modelName of modelTierList) {
     try {
+      console.log(`🤖 Intentando generar propuesta con: ${modelName}...`);
       const model = genAI.getGenerativeModel({ model: modelName });
+      
       const result = await model.generateContent({
         contents: [{ role: 'user', parts: [{ text: prompt }] }]
       });
-      return result.response.text();
+
+      const text = result.response.text();
+      console.log(`✅ Propuesta generada con éxito usando ${modelName}`);
+      return text;
 
     } catch (error) {
-      const isServiceUnavailable =
-        error.message.includes('503') || error.message.includes('high demand');
+      const errorMsg = error.message;
+      
+      // Definimos qué errores nos permiten saltar al siguiente modelo
+      const shouldRetryWithNext = 
+        errorMsg.includes('503') ||          // Service Unavailable
+        errorMsg.includes('429') ||          // Rate Limit
+        errorMsg.includes('404') ||          // Model Not Found (el error que tenías)
+        errorMsg.includes('high demand');
 
-      if (isServiceUnavailable) {
-        console.warn(`⚠️ Modelo ${modelName} saturado. Intentando con el siguiente...`);
-        continue;
+      if (shouldRetryWithNext) {
+        console.warn(`⚠️ El modelo ${modelName} no está disponible (${errorMsg.substring(0, 50)}...).`);
+        continue; // Prueba el siguiente modelo de la lista
       }
 
-      console.error(`❌ Error crítico en ${modelName}:`, error.message);
-      break;
+      // Si es un error de API KEY o permisos, no servirá de nada probar otros modelos
+      console.error(`❌ Error crítico no recuperable en ${modelName}:`, errorMsg);
+      break; 
     }
   }
 
-  console.error('🚨 Todos los modelos de Gemini fallaron. Usando generador de emergencia.');
+  console.error('🚨 Todos los modelos de la nube fallaron o no fueron encontrados. Usando generador de emergencia local.');
   return generateFallbackContent(data);
 }
 
@@ -98,9 +115,9 @@ export async function generateProposalContent(data) {
     : `Modalidad: VENTA RÁPIDA. El presupuesto incluye exclusivamente el suministro de equipos. No incluye instalación, configuración ni soporte post-venta. El soporte queda a cargo del instalador contratante.`;
 
   const prompt = `
-Eres el asistente comercial de IOTEC / 01Infinito, empresa especializada en soluciones de seguridad electrónica, domótica e infraestructura tecnológica para instaladores y el gremio.
+Eres el asistente comercial de IOTEC / 01Infinito, empresa especializada en soluciones de seguridad electrónica y domótica.
 
-Dados los siguientes datos de una propuesta comercial:
+Genera una propuesta comercial profesional basada en estos datos:
 
 ## Datos del Proyecto
 - Nombre: ${project.name || 'Sin nombre'}
@@ -109,16 +126,16 @@ Dados los siguientes datos de una propuesta comercial:
 ## Modalidad de Venta
 ${clausulasSoporte}
 
-## Alcances del Proyecto
+## Alcances
 ${scope || 'No especificado'}
 
 ## Fuera de Alcances
 ${outOfScope || 'No especificado'}
 
-## Solución Técnica Propuesta
+## Solución Técnica
 ${solution || 'No especificado'}
 
-## Items del Presupuesto
+## Items
 ${itemsList}
 
 ## Totales
@@ -126,14 +143,13 @@ ${itemsList}
 - IVA: ${totals.iva}
 - TOTAL: ${totals.total}
 
-Genera una propuesta comercial profesional con estas secciones exactas:
-1. **Resumen Ejecutivo** (2-3 oraciones atractivas, orientadas a ventas)
-2. **Descripción de la Solución** (basado en los datos proporcionados, técnico pero accesible)
-3. **Beneficios Principales** (lista de 4-5 beneficios concretos del proyecto)
-4. **Cláusulas de Soporte** (adapta el texto según la modalidad: IOTEC o Venta Rápida)
+Genera el contenido con estas secciones:
+1. Resumen Ejecutivo
+2. Descripción de la Solución
+3. Beneficios Principales (lista de 4-5 items)
+4. Cláusulas de Soporte
 
-Usa un tono profesional y orientado a generar confianza. El contenido debe ser conciso y en español rioplatense.
-NO incluyas bloques de código Mermaid ni diagramas técnicos. Solo texto.
+Usa español rioplatense, tono profesional y NO incluyas diagramas Mermaid.
 `;
 
   return getAIResponse(prompt, data);
