@@ -358,7 +358,7 @@ initWizardManager();
 // backend/services/geminiService.js
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyBYWIKfjBNauhjUZ6QXKTw-fhyLv49b-cA';
+const API_KEY = process.env.GEMINI_API_KEY || 'YOUR_GEMINI_API_KEY_HERE';
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 export async function generateProposalContent(data) {

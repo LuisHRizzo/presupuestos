@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Conversor de archivos Excel (XLS/XLSX) a CSV. Convierte múltiples hojas en archivos CSV individuales de forma rápida y segura, directamente en tu navegador." />
-  <title>Conversor Excel → CSV | Multi-hoja</title>
+  <meta name="description" content="Sistema de cotización ágil IOTEC / 01Infinito — Generación de presupuestos y propuestas comerciales profesionales para instaladores." />
+  <title>IOTEC — Sistema de Cotización Ágil</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/src/styles/index.css" />
+  <link rel="stylesheet" href="/src/styles/iotec.css" />
 </head>
 <body>
   <div class="app-container">
-    <!-- Header -->
+
+    <!-- ─── Header ─────────────────────────────────────── -->
     <header class="app-header">
       <div class="header-content">
         <div class="logo">
@@ -23,15 +25,15 @@
               <path d="M12 14h16M12 20h16M12 26h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
               <defs>
                 <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="40">
-                  <stop stop-color="#6366f1"/>
-                  <stop offset="1" stop-color="#06b6d4"/>
+                  <stop stop-color="#112240"/>
+                  <stop offset="1" stop-color="#00a3e0"/>
                 </linearGradient>
               </defs>
             </svg>
           </div>
           <div class="logo-text">
-            <h1>Conversor Excel</h1>
-            <span class="logo-subtitle">XLS/XLSX → CSV</span>
+            <h1>IOTEC / 01Infinito</h1>
+            <span class="logo-subtitle">Sistema de Cotización Ágil</span>
           </div>
         </div>
         <div class="header-badge">
@@ -40,20 +42,21 @@
         </div>
       </div>
       <div class="nav-tabs">
-        <button class="tab-btn active" data-tab="converter">Conversor</button>
-        <button class="tab-btn" data-tab="quote">Presupuesto</button>
+        <button class="tab-btn active" data-tab="converter">📥 Importar Catálogo</button>
+        <button class="tab-btn" data-tab="quote">📋 Presupuesto</button>
       </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- ─── Main Content ────────────────────────────────── -->
     <main class="main-content">
-      <!-- Step 1: Upload -->
+
+      <!-- ── Importar Excel ─────────────────────────────── -->
       <section id="section-upload" class="section section-upload active">
         <div class="section-header">
           <span class="step-number">1</span>
           <div>
-            <h2>Cargar archivo Excel</h2>
-            <p class="section-desc">Arrastrá o seleccioná un archivo .xls o .xlsx para comenzar</p>
+            <h2>Cargar Lista de Precios</h2>
+            <p class="section-desc">Soporta formatos BigDipper, Hikvision, Acubox y genérico. El proveedor se detecta automáticamente.</p>
           </div>
         </div>
 
@@ -65,7 +68,7 @@
                 <path d="M32 22v20M22 32h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <p class="drop-text">Arrastrá tu archivo aquí</p>
+            <p class="drop-text">Arrastrá tu lista de precios aquí</p>
             <p class="drop-subtext">o hacé click para seleccionar</p>
             <div class="drop-formats">
               <span class="format-badge">.xls</span>
@@ -75,7 +78,6 @@
           <input type="file" id="file-input" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden />
         </div>
 
-        <!-- File Info (shown after upload) -->
         <div id="file-info" class="file-info hidden">
           <div class="file-info-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -95,185 +97,277 @@
         </div>
       </section>
 
-      <!-- Step 2: Preview -->
+      <!-- ── Preview / Importar ─────────────────────────── -->
       <section id="section-preview" class="section section-preview hidden">
         <div class="section-header">
           <span class="step-number">2</span>
           <div>
-            <h2>Archivo Listo para Importar</h2>
-            <p class="section-desc">El backend procesará automáticamente todas las hojas con listas de productos.</p>
+            <h2>Listo para Importar</h2>
+            <p class="section-desc">El proveedor fue detectado automáticamente. El backend procesará todas las hojas con productos.</p>
           </div>
         </div>
-
-        <div id="sheets-list" class="sheets-list" style="display: none;">
-          <!-- Hidden since we don't select sheets manually anymore -->
-        </div>
-
+        <div id="sheets-list" class="sheets-list" style="display:none;"></div>
         <div class="actions-bar">
           <button id="btn-convert" class="btn btn-primary btn-lg">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-              <path d="M12 3v12M5 12l7 7 7-7"/>
-              <path d="M19 21H5"/>
+              <path d="M12 3v12M5 12l7 7 7-7"/><path d="M19 21H5"/>
             </svg>
             Importar a Base de Datos
           </button>
         </div>
       </section>
 
-      <!-- Step 3: Progress / Results -->
+      <!-- ── Resultados importación ─────────────────────── -->
       <section id="section-results" class="section section-results hidden">
         <div class="section-header">
           <span class="step-number step-done">✓</span>
           <div>
-            <h2>Conversión completada</h2>
-            <p id="results-summary" class="section-desc">Se generaron 0 archivos CSV</p>
+            <h2>Importación completada</h2>
+            <p id="results-summary" class="section-desc">Se procesaron 0 productos</p>
           </div>
         </div>
-
-        <div id="results-list" class="results-list">
-          <!-- Dynamic content -->
-        </div>
-
+        <div id="results-list" class="results-list"></div>
         <div class="actions-bar">
-          <button id="btn-download-zip" class="btn btn-primary btn-lg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            Descargar todo (ZIP)
-          </button>
-          <button id="btn-new-conversion" class="btn btn-ghost btn-lg">
-            Nueva conversión
-          </button>
+          <button id="btn-download-zip" class="btn btn-primary btn-lg" style="display:none;">Descargar ZIP</button>
+          <button id="btn-new-conversion" class="btn btn-ghost btn-lg">Nueva importación</button>
         </div>
       </section>
 
+      <!-- ── Sección Presupuesto ─────────────────────────── -->
       <section id="section-quote" class="section section-quote hidden">
-        <div class="quote-client">
-          <h3>Datos del Cliente</h3>
+
+        <!-- Datos del cliente -->
+        <div class="quote-block">
+          <h3 class="block-title">👤 Datos del Cliente</h3>
           <div class="form-row">
-            <input type="text" id="client-name" placeholder="Nombre" />
-            <input type="text" id="client-cuit" placeholder="CUIT" />
+            <input type="text" id="client-name"    placeholder="Nombre / Razón Social" />
+            <input type="text" id="client-cuit"    placeholder="CUIT" />
             <input type="text" id="client-address" placeholder="Dirección" />
           </div>
           <div class="form-row">
-            <input type="text" id="client-phone" placeholder="Teléfono" />
+            <input type="text"  id="client-phone" placeholder="Teléfono" />
             <input type="email" id="client-email" placeholder="Email" />
           </div>
         </div>
-        
-        <div class="quote-search">
-          <h3>Agregar Productos</h3>
+
+        <!-- Buscar productos -->
+        <div class="quote-block">
+          <h3 class="block-title">🔍 Buscar Producto del Catálogo</h3>
           <div class="search-input-wrapper">
-            <input type="text" id="product-search" placeholder="Buscar producto..." autocomplete="off" />
+            <input type="text" id="product-search" placeholder="Buscá por código, descripción o marca..." autocomplete="off" />
             <div id="search-results" class="search-results hidden"></div>
           </div>
         </div>
-        
-        <div class="service-input">
-          <h4>Agregar Servicio</h4>
+
+        <!-- Catálogo de Servicios IOTEC -->
+        <div class="quote-block">
+          <h3 class="block-title">🛡️ Catálogo de Servicios IOTEC</h3>
+          <p class="block-hint">Seleccioná el precio para cada servicio antes de agregarlo.</p>
+          <div id="services-catalog" class="services-catalog">
+            <p class="muted">Cargando servicios...</p>
+          </div>
+        </div>
+
+        <!-- Agregar servicio manual -->
+        <div class="quote-block">
+          <h3 class="block-title">⚙️ Agregar Servicio Manual</h3>
           <div class="form-row">
-            <input type="text" id="service-desc" placeholder="Descripción del servicio" />
-            <input type="number" id="service-price" placeholder="Precio unit." />
-            <input type="number" id="service-qty" placeholder="Cantidad" value="1" min="1" />
-            <button id="btn-add-service" class="btn btn-secondary">Agregar</button>
+            <input type="text"   id="service-desc"  placeholder="Descripción del servicio" />
+            <input type="number" id="service-price" placeholder="Precio unit. $" min="0" step="0.01" />
+            <input type="number" id="service-qty"   placeholder="Cantidad" value="1" min="1" />
+            <button id="btn-add-service" class="btn btn-secondary">+ Agregar</button>
           </div>
         </div>
-        
-        <div class="quote-items">
-          <table id="items-table">
-            <thead>
-              <tr>
-                <th>Código</th>
-                <th>Descripción</th>
-                <th>Marca</th>
-                <th>Precio Unit.</th>
-                <th>IVA</th>
-                <th>Cantidad</th>
-                <th>Subtotal</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody id="items-body"></tbody>
-          </table>
-        </div>
-        
-        <div class="quote-totals">
-          <div class="total-row">
-            <span>Subtotal:</span>
-            <span id="total-subtotal">$0.00</span>
-          </div>
-          <div class="total-row">
-            <span>IVA (21%):</span>
-            <span id="total-iva">$0.00</span>
-          </div>
-          <div class="total-row total-final">
-            <span>Total:</span>
-            <span id="total-general">$0.00</span>
+
+        <!-- Ferretería fina / Cableado / Extras -->
+        <div class="quote-block">
+          <h3 class="block-title">🔩 Ferretería / Cableado / Extras</h3>
+          <p class="block-hint">Ítems que no están en el catálogo principal (tornillos, cable, conectores, etc.).</p>
+          <div class="form-row">
+            <input type="text"   id="extra-desc"  placeholder="Descripción (ej. Cable UTP 100m)" />
+            <input type="number" id="extra-price" placeholder="Precio unit. $" min="0" step="0.01" />
+            <input type="number" id="extra-qty"   placeholder="Cantidad" value="1" min="1" />
+            <button id="btn-add-extra" class="btn btn-secondary">+ Agregar</button>
           </div>
         </div>
-        
-        <div class="markup-input">
-          <label for="markup-percent">Markup (%): </label>
-          <input type="number" id="markup-percent" value="0" min="0" max="100" />
+
+        <!-- Tabla de Items -->
+        <div class="quote-block">
+          <h3 class="block-title">📦 Ítems del Presupuesto</h3>
+          <div class="quote-items">
+            <table id="items-table">
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Descripción</th>
+                  <th>Marca/Tipo</th>
+                  <th>Precio Unit.</th>
+                  <th>IVA</th>
+                  <th>Cantidad</th>
+                  <th>Subtotal</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="items-body"></tbody>
+            </table>
+          </div>
         </div>
-        
+
+        <!-- Markup y Totales -->
+        <div class="quote-block quote-footer-row">
+          <div class="markup-panel">
+            <div class="markup-item">
+              <label for="markup-iotec">Markup IOTEC (%) <span class="badge-internal">Interno</span></label>
+              <input type="number" id="markup-iotec" value="30" min="0" max="200" />
+            </div>
+            <div class="markup-item">
+              <label for="markup-percent">Markup Instalador (%)</label>
+              <input type="number" id="markup-percent" value="0" min="0" max="200" />
+            </div>
+          </div>
+
+          <div class="quote-totals">
+            <div class="total-row">
+              <span>Subtotal:</span>
+              <span id="total-subtotal">$0.00</span>
+            </div>
+            <div class="total-row">
+              <span>IVA (21%):</span>
+              <span id="total-iva">$0.00</span>
+            </div>
+            <div class="total-row total-final">
+              <span>Total:</span>
+              <span id="total-general">$0.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aviso de variabilidad -->
+        <div class="price-warning">
+          ⚠️ Los precios pueden variar según stock y disponibilidad de distribuidores. Verificar antes de confirmar.
+        </div>
+
+        <!-- Acciones -->
         <div class="quote-actions">
-          <button id="btn-generate-pdf" class="btn btn-primary">Generar PDF</button>
-          <button id="btn-start-wizard" class="btn btn-secondary">Crear Propuesta</button>
-          <button id="btn-clear-quote" class="btn btn-ghost">Limpiar</button>
+          <button id="btn-generate-pdf"  class="btn btn-secondary">📄 Presupuesto PDF</button>
+          <button id="btn-start-wizard"  class="btn btn-primary">🚀 Crear Propuesta Comercial</button>
+          <button id="btn-clear-quote"   class="btn btn-ghost">🗑 Limpiar</button>
         </div>
       </section>
 
-      <!-- Wizard de Propuesta Comercial -->
+      <!-- ── Wizard de Propuesta Comercial ─────────────── -->
       <section id="section-wizard" class="section section-wizard hidden">
-        <div class="wizard-steps">
-          <div class="wizard-step active" data-step="1">1. Proyecto</div>
-          <div class="wizard-step" data-step="2">2. Alcances</div>
-          <div class="wizard-step" data-step="3">3. Fuera de Alcances</div>
-          <div class="wizard-step" data-step="4">4. Solución</div>
-          <div class="wizard-step" data-step="5">5. Revisión</div>
+
+        <div class="wizard-header">
+          <h2>Propuesta Comercial IOTEC</h2>
+          <span id="wizard-step-indicator" class="wizard-step-indicator">Paso 1 de 5</span>
         </div>
-        
+
+        <!-- Progress bar de pasos -->
+        <div class="wizard-steps">
+          <div class="wizard-step active"    data-step="1"><span class="step-num">1</span><span>Proyecto</span></div>
+          <div class="wizard-step"           data-step="2"><span class="step-num">2</span><span>Modalidad</span></div>
+          <div class="wizard-step"           data-step="3"><span class="step-num">3</span><span>Revisión</span></div>
+          <div class="wizard-step"           data-step="4"><span class="step-num">4</span><span>Alcances</span></div>
+          <div class="wizard-step"           data-step="5"><span class="step-num">5</span><span>Generar</span></div>
+        </div>
+
         <div class="wizard-content">
+
+          <!-- Paso 1: Datos del proyecto -->
           <div class="wizard-panel" data-step="1">
-            <h3>Datos del Proyecto</h3>
-            <input type="text" id="project-name" placeholder="Nombre del proyecto" />
-            <textarea id="project-desc" placeholder="Descripción breve del proyecto" rows="4"></textarea>
+            <h3>📁 Datos del Proyecto</h3>
+            <div class="field-group">
+              <label for="project-name">Nombre del proyecto <span class="required">*</span></label>
+              <input type="text" id="project-name" placeholder="Ej. Sistema de alarma y CCTV — Residencia Martínez" />
+            </div>
+            <div class="field-group">
+              <label for="project-desc">Descripción breve</label>
+              <textarea id="project-desc" placeholder="Contexto general del cliente y su necesidad..." rows="4"></textarea>
+            </div>
           </div>
-          
+
+          <!-- Paso 2: Modalidad IOTEC vs Venta Rápida -->
           <div class="wizard-panel hidden" data-step="2">
-            <h3>Alcances del Proyecto</h3>
-            <textarea id="project-scope" placeholder="¿Qué incluye el proyecto?" rows="6"></textarea>
+            <h3>🎯 Modalidad de Venta</h3>
+            <p class="panel-hint">Elegí cómo se enmarcará esta propuesta. Esto determina las cláusulas de soporte en el PDF.</p>
+
+            <div class="modalidad-toggle">
+              <button class="modalidad-btn active" data-modalidad="IOTEC" id="btn-iotec">
+                <span class="modalidad-icon">🟢</span>
+                <div>
+                  <strong>Metodología IOTEC</strong>
+                  <p>Soporte integral, instalación, configuración y acta de conformidad incluidos.</p>
+                </div>
+              </button>
+              <button class="modalidad-btn" data-modalidad="VENTA_RAPIDA" id="btn-rapida">
+                <span class="modalidad-icon">🟡</span>
+                <div>
+                  <strong>Venta Rápida</strong>
+                  <p>Solo suministro de equipos. Sin instalación ni soporte post-venta.</p>
+                </div>
+              </button>
+            </div>
+
+            <div id="modalidad-iotec-info" class="modalidad-info info-iotec">
+              ✅ Se incluirán cláusulas de <strong>Metodología IOTEC</strong> en el PDF: instalación, configuración, capacitación y soporte post-instalación.
+            </div>
+            <div id="modalidad-rapida-info" class="modalidad-info info-rapida hidden">
+              ⚠️ Se incluirán cláusulas de <strong>Venta Rápida</strong>: solo suministro de equipos. El soporte queda a cargo del instalador. Se recomienda ofrecer la Metodología IOTEC para proyectos de mayor valor.
+            </div>
           </div>
-          
+
+          <!-- Paso 3: Revisión de ítems y totales -->
           <div class="wizard-panel hidden" data-step="3">
-            <h3>Fuera de Alcances</h3>
-            <textarea id="project-out-of-scope" placeholder="¿Qué NO incluye el proyecto?" rows="6"></textarea>
+            <h3>📦 Revisión del Presupuesto</h3>
+            <div id="review-items" class="review-items"></div>
+            <div id="review-totals" class="review-totals"></div>
           </div>
-          
+
+          <!-- Paso 4: Alcances y solución -->
           <div class="wizard-panel hidden" data-step="4">
-            <h3>Solución Técnica</h3>
-            <textarea id="project-solution" placeholder="Describe la solución propuesta" rows="6"></textarea>
+            <h3>📋 Alcances y Solución Técnica</h3>
+            <div class="field-group">
+              <label for="project-scope">¿Qué incluye el proyecto?</label>
+              <textarea id="project-scope" placeholder="Ej. Instalación de 8 cámaras, NVR, cableado estructurado, puesta en marcha..." rows="4"></textarea>
+            </div>
+            <div class="field-group">
+              <label for="project-out-of-scope">¿Qué NO incluye el proyecto?</label>
+              <textarea id="project-out-of-scope" placeholder="Ej. Obra civil, tendido eléctrico, monitoreo remoto..." rows="3"></textarea>
+            </div>
+            <div class="field-group">
+              <label for="project-solution">Solución técnica propuesta</label>
+              <textarea id="project-solution" placeholder="Descripción técnica de la solución (equipos, topología, integración)..." rows="4"></textarea>
+            </div>
           </div>
-          
+
+          <!-- Paso 5: Generar -->
           <div class="wizard-panel hidden" data-step="5">
-            <h3>Revisión de Totales</h3>
-            <div id="review-totals"></div>
+            <h3>🚀 Generar Propuesta con IA</h3>
+            <p class="panel-hint">La IA de Google Gemini redactará el contenido técnico y comercial de la propuesta. El PDF final incluirá los ítems, totales y cláusulas de soporte según la modalidad elegida.</p>
+
+            <div class="final-review-box">
+              <div id="review-totals-final"></div>
+            </div>
+
             <label class="checkbox-label">
               <input type="checkbox" id="confirm-totals" />
-              Confirmo que los totales son correctos
+              Confirmé que los ítems y totales son correctos
             </label>
+
+            <div class="ai-badge">
+              ✨ Powered by Google Gemini — El contenido técnico será generado automáticamente
+            </div>
           </div>
         </div>
-        
+
         <div class="wizard-nav">
-          <button id="btn-wizard-prev" class="btn btn-ghost" disabled>Atrás</button>
-          <button id="btn-wizard-next" class="btn btn-primary">Siguiente</button>
-          <button id="btn-generate-proposal" class="btn btn-primary hidden">Generar Propuesta</button>
+          <button id="btn-wizard-prev" class="btn btn-ghost" disabled>← Atrás</button>
+          <button id="btn-wizard-next" class="btn btn-primary">Siguiente →</button>
+          <button id="btn-generate-proposal" class="btn btn-primary hidden">🚀 Generar Propuesta</button>
         </div>
       </section>
+
     </main>
 
     <!-- Toast Container -->

@@ -15,6 +15,7 @@ model ImportBatch {
   filename  String
   createdAt DateTime  @default(now())
   status    String    @default("SUCCESS")
+  proveedor String?
   products  Product[]
 }
 
@@ -23,12 +24,46 @@ model Product {
   codigo        String      @unique
   descripcion   String
   marca         String?
+  proveedor     String?     // "BIGDIPPER", "HIKVISION", "ACUBOX", "GENERICO"
   precioPartner Float?
   precioGremio  Float?
   precioPmp     Float?
   iva           Float?
   stockTotal    Int         @default(0)
-  
+
   importBatchId Int
   importBatch   ImportBatch @relation(fields: [importBatchId], references: [id])
+  kitItems      KitItem[]
+}
+
+// Ítems de servicio (horas de soporte, ingeniería, jornadas de instalación)
+model ServiceItem {
+  id          Int       @id @default(autoincrement())
+  codigo      String    @unique
+  descripcion String
+  tipo        String    // "HORAS_SOPORTE", "INGENIERIA", "JORNADA_INSTALACION"
+  precio      Float
+  unidad      String    // "hora", "jornada", "media jornada"
+  activo      Boolean   @default(true)
+  kitItems    KitItem[]
+}
+
+// Kits de productos y servicios agrupados
+model Kit {
+  id          Int       @id @default(autoincrement())
+  nombre      String    @unique
+  descripcion String?
+  activo      Boolean   @default(true)
+  items       KitItem[]
+}
+
+model KitItem {
+  id        Int          @id @default(autoincrement())
+  kitId     Int
+  kit       Kit          @relation(fields: [kitId], references: [id], onDelete: Cascade)
+  productId Int?
+  product   Product?     @relation(fields: [productId], references: [id])
+  serviceId Int?
+  service   ServiceItem? @relation(fields: [serviceId], references: [id])
+  cantidad  Int          @default(1)
 }
