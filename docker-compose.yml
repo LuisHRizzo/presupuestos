@@ -3,31 +3,14 @@ version: '3.8'
 # ─────────────────────────────────────────────────────────
 # IOTEC / 01Infinito — Sistema de Cotización Ágil
 #
-# Servicios:
-#   frontend  → nginx sirviendo el build de Vite + proxy al backend
-#   backend   → Node.js + Prisma + SQLite
-#
 # Arranque:
 #   docker compose up --build        (primera vez)
-#   docker compose up -d             (siguientes veces, background)
+#   docker compose up -d             (siguientes veces)
 #   docker compose down              (apagar todo)
 #   docker compose logs -f backend   (ver logs del backend)
 # ─────────────────────────────────────────────────────────
 
 services:
-
-  # ── Frontend ───────────────────────────────────────────
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile.frontend
-    container_name: iotec-frontend
-    ports:
-      - "3000:80"       # Acceder en http://localhost:3000
-    depends_on:
-      backend:
-        condition: service_healthy
-    restart: unless-stopped
 
   # ── Backend ────────────────────────────────────────────
   backend:
@@ -36,19 +19,31 @@ services:
       dockerfile: Dockerfile.backend
     container_name: iotec-backend
     ports:
-      - "3001:3001"     # Exposición directa (opcional, útil para dev/debug)
+      - "3001:3001"
     environment:
       DATABASE_URL: "file:/app/data/prod.db"
-      GEMINI_API_KEY: "${GEMINI_API_KEY:-}"   # Leer de .env en la raíz del proyecto
+      GEMINI_API_KEY: "${GEMINI_API_KEY:-}"
       NODE_ENV: "production"
     volumes:
-      - db-data:/app/data   # Persistencia de la base de datos SQLite
+      - db-data:/app/data
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:3001/health"]
-      interval: 15s
+      interval: 20s
       timeout: 10s
-      retries: 5
-      start_period: 60s
+      retries: 10
+      start_period: 90s
+    restart: unless-stopped
+
+  # ── Frontend ───────────────────────────────────────────
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: iotec-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend         # Solo espera que el contenedor arranque, no que sea healthy
     restart: unless-stopped
 
 # ── Volumen para la DB SQLite ──────────────────────────

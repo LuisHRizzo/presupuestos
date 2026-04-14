@@ -11,7 +11,9 @@ RUN npm install
 
 # Copiar schema de Prisma y generar el cliente
 COPY backend/prisma ./prisma
-RUN npx prisma generate
+
+# Generar Prisma Client (necesita DATABASE_URL; usamos tmp para el build)
+RUN DATABASE_URL="file:/tmp/build.db" npx prisma generate
 
 # Copiar el resto del código fuente
 COPY backend/server.js ./
@@ -21,9 +23,13 @@ COPY backend/seed.mjs ./seed.mjs
 
 # La DB SQLite vive en un volumen montado en /app/data
 ENV DATABASE_URL="file:/app/data/prod.db"
+ENV NODE_ENV="production"
 
 EXPOSE 3001
 
-# Inline startup: sin archivos de shell externos (evita problemas de CRLF)
-# 1. Aplica schema a la DB  2. Seed de servicios  3. Arranca el servidor
-CMD ["sh", "-c", "npx prisma db push --schema=./prisma/schema.prisma --skip-generate --accept-data-loss && node seed.mjs && node server.js"]
+# Startup:
+#   1. Crea el directorio de datos si no existe
+#   2. Aplica el schema a la BD (idempotente)
+#   3. Carga servicios IOTEC por defecto (idempotente)
+#   4. Arranca el servidor — usa 'exec' para que sea el PID 1
+CMD ["sh", "-c", "mkdir -p /app/data && npx prisma db push --schema=./prisma/schema.prisma --skip-generate --accept-data-loss 2>&1 && node seed.mjs 2>&1 && exec node server.js"]
