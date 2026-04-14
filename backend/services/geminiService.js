@@ -83,8 +83,7 @@ async function getAIResponse(prompt, data) {
         errorMsg.includes('high demand');
 
       if (shouldRetryWithNext) {
-        console.warn(`⚠️ El modelo ${modelName} no está disponible (${errorMsg.substring(0, 50)}...).`);
-        continue; // Prueba el siguiente modelo de la lista
+        console.warn(`⚠️ El modelo ${modelName} falló. Error exacto: ${errorMsg}`);        continue; // Prueba el siguiente modelo de la lista
       }
 
       // Si es un error de API KEY o permisos, no servirá de nada probar otros modelos
