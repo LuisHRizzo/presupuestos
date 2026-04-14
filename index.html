@@ -13,7 +13,80 @@
   <link rel="stylesheet" href="/src/styles/iotec.css" />
 </head>
 <body>
-  <div class="app-container">
+
+  <!-- ─── LOGIN OVERLAY ─────────────────────────────────── -->
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-card">
+
+      <div class="login-logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+          <rect width="40" height="40" rx="10" fill="url(#login-grad)"/>
+          <path d="M12 14h16M12 20h16M12 26h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="login-grad" x1="0" y1="0" x2="40" y2="40">
+              <stop stop-color="#112240"/>
+              <stop offset="1" stop-color="#00a3e0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>
+          <h1 class="login-title">IOTEC / 01Infinito</h1>
+          <p class="login-subtitle">Sistema de Cotización Ágil</p>
+        </div>
+      </div>
+
+      <div id="login-mode">
+        <h2 class="login-heading">Ingresar</h2>
+        <p class="login-hint">Acceso exclusivo para agentes IOTEC</p>
+
+        <div class="login-form">
+          <div class="login-field">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" placeholder="tu@email.com" autocomplete="email" />
+          </div>
+          <div class="login-field">
+            <label for="login-password">Contraseña</label>
+            <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+          <div id="login-error" class="login-error hidden"></div>
+          <button id="btn-login" class="btn btn-primary btn-lg login-submit">Ingresar</button>
+        </div>
+
+        <button class="login-switch" id="go-register">
+          ¿Primer acceso? Registrarse
+        </button>
+      </div>
+
+      <div id="register-mode" class="hidden">
+        <h2 class="login-heading">Crear cuenta</h2>
+        <p class="login-hint">Completar todos los campos</p>
+
+        <div class="login-form">
+          <div class="login-field">
+            <label for="reg-nombre">Nombre completo</label>
+            <input type="text" id="reg-nombre" placeholder="Ej. Luis Rizzo" autocomplete="name" />
+          </div>
+          <div class="login-field">
+            <label for="reg-email">Email</label>
+            <input type="email" id="reg-email" placeholder="tu@email.com" autocomplete="email" />
+          </div>
+          <div class="login-field">
+            <label for="reg-password">Contraseña</label>
+            <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" autocomplete="new-password" />
+          </div>
+          <div id="register-error" class="login-error hidden"></div>
+          <button id="btn-register" class="btn btn-primary btn-lg login-submit">Crear cuenta</button>
+        </div>
+
+        <button class="login-switch" id="go-login">
+          Ya tengo cuenta
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="app-container" id="app-container" style="display:none;">
 
     <!-- ─── Header ─────────────────────────────────────── -->
     <header class="app-header">
@@ -38,8 +111,9 @@
         </div>
         <div class="header-badge">
           <span class="badge-dot"></span>
-          Procesamiento local
+          <span id="agente-nombre">Procesamiento local</span>
         </div>
+        <button id="btn-logout" class="btn btn-ghost btn-sm" style="margin-left:var(--sp-2);">Cerrar sesión</button>
       </div>
       <div class="nav-tabs">
         <button class="tab-btn active" data-tab="converter">📥 Importar Catálogo</button>

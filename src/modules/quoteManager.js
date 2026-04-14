@@ -1,8 +1,10 @@
 import { getDom } from './uiManager.js';
 import { showToast } from './uiManager.js';
+import { authFetch, getAgente } from './authManager.js';
 
 const IVA_RATE = 0.21;
 const API      = import.meta.env.VITE_API_URL ?? '';
+
 
 let quoteItems        = [];
 let markupIOTEC       = 30;  // % margen IOTEC (oculto al cliente)
@@ -91,15 +93,15 @@ function handleTabSwitch(e) {
 // ─────────────────────────────────────────────────────────
 async function loadServicesCatalog() {
   try {
-    const res      = await fetch(`${API}/api/services`);
+    const res      = await authFetch(`${API}/api/services`);
     const services = await res.json();
     renderServiceCatalog(services);
   } catch (err) {
     console.warn('No se pudo cargar catálogo de servicios:', err.message);
     // Intentar seed automático la primera vez
     try {
-      await fetch(`${API}/api/services/seed`, { method: 'POST' });
-      const res2     = await fetch(`${API}/api/services`);
+      await authFetch(`${API}/api/services/seed`, { method: 'POST' });
+      const res2     = await authFetch(`${API}/api/services`);
       const services = await res2.json();
       renderServiceCatalog(services);
     } catch { /* silencioso */ }
@@ -173,7 +175,7 @@ function renderServiceCatalog(services) {
 // ─────────────────────────────────────────────────────────
 async function searchProducts(query) {
   try {
-    const res      = await fetch(`${API}/api/products/search?q=${encodeURIComponent(query)}`);
+    const res      = await authFetch(`${API}/api/products/search?q=${encodeURIComponent(query)}`);
     const products = await res.json();
     renderSearchResults(products);
   } catch (err) {
@@ -374,7 +376,7 @@ function generatePDF() {
     email:     document.getElementById('client-email')?.value   || '-'
   };
 
-  fetch(`${API}/api/quote/generate-pdf`, {
+  authFetch(`${API}/api/quote/generate-pdf`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ items, client })

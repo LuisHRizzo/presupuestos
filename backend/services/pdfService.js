@@ -9,19 +9,26 @@ const COLOR_RAPIDA    = [255, 160, 0];   // Amarillo Venta Rápida
 const COLOR_MUTED     = [120, 120, 130];
 const COLOR_LIGHT_BG  = [245, 247, 252];
 
-function addPageFooter(doc, pageNum, totalPages, proposalNumber) {
+function addPageFooter(doc, pageNum, totalPages, proposalNumber, agente) {
   const w = doc.internal.pageSize.getWidth();
   const h = doc.internal.pageSize.getHeight();
 
   doc.setDrawColor(...COLOR_ACCENT);
   doc.setLineWidth(0.5);
-  doc.line(14, h - 15, w - 14, h - 15);
+  doc.line(14, h - 18, w - 14, h - 18);
 
   doc.setFontSize(7.5);
   doc.setTextColor(...COLOR_MUTED);
-  doc.text('IOTEC / 01Infinito  •  Soluciones en Seguridad, Domótica e Infraestructura Tecnológica', w / 2, h - 10, { align: 'center' });
-  doc.text(`Propuesta ${proposalNumber}  •  Pág. ${pageNum} de ${totalPages}`, w - 14, h - 10, { align: 'right' });
-  doc.text('⚠ Precios sujetos a variabilidad de stock y disponibilidad de distribuidores', 14, h - 10);
+  doc.text('IOTEC / 01Infinito  •  Soluciones en Seguridad, Domótica e Infraestructura Tecnológica', w / 2, h - 12, { align: 'center' });
+  doc.text(`Propuesta ${proposalNumber}  •  Pág. ${pageNum} de ${totalPages}`, w - 14, h - 12, { align: 'right' });
+  doc.text('⚠ Precios sujetos a variabilidad de stock y disponibilidad de distribuidores', 14, h - 12);
+
+  // Firma del agente comercial
+  if (agente) {
+    doc.setFontSize(7);
+    doc.setTextColor(...COLOR_ACCENT);
+    doc.text(`Comercial: ${agente.nombre}  •  ${agente.email}`, 14, h - 6);
+  }
 }
 
 function addHeader(doc, proposalNumber, today, modalidad) {
@@ -69,7 +76,7 @@ function addHeader(doc, proposalNumber, today, modalidad) {
 // PRESUPUESTO RÁPIDO (sin wizard)
 // ─────────────────────────────────────────────────────────
 export function generateQuotePDF(data) {
-  const { items, client } = data;
+  const { items, client, agente } = data;
   const today        = new Date().toLocaleDateString('es-AR');
   const quoteNumber  = `P-${Date.now().toString().slice(-6)}`;
 
@@ -174,11 +181,19 @@ export function generateQuotePDF(data) {
   doc.text(`$${total.toFixed(2)}`, w - 14, y + 22, { align: 'right' });
 
   // Footer
-  const h = doc.internal.pageSize.getHeight();
+  const pageH = doc.internal.pageSize.getHeight();
+  doc.setDrawColor(...COLOR_ACCENT);
+  doc.setLineWidth(0.5);
+  doc.line(14, pageH - 18, w - 14, pageH - 18);
   doc.setFontSize(7.5);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...COLOR_MUTED);
-  doc.text('⚠ Precios sujetos a variabilidad de stock y disponibilidad de distribuidores', w / 2, h - 10, { align: 'center' });
+  doc.text('⚠ Precios sujetos a variabilidad de stock y disponibilidad de distribuidores', w / 2, pageH - 12, { align: 'center' });
+  if (agente) {
+    doc.setFontSize(7);
+    doc.setTextColor(...COLOR_ACCENT);
+    doc.text(`Comercial: ${agente.nombre}  •  ${agente.email}`, 14, pageH - 6);
+  }
 
   return Buffer.from(doc.output('arraybuffer'));
 }
@@ -187,7 +202,7 @@ export function generateQuotePDF(data) {
 // PROPUESTA COMERCIAL (con wizard IOTEC)
 // ─────────────────────────────────────────────────────────
 export function generateProposalPDF(data) {
-  const { project, scope, outOfScope, solution, items, totals, aiContent, modalidad } = data;
+  const { project, scope, outOfScope, solution, items, totals, aiContent, modalidad, agente } = data;
   const today          = new Date().toLocaleDateString('es-AR');
   const proposalNumber = `PROP-${Date.now().toString().slice(-6)}`;
   const esIOTEC        = modalidad === 'IOTEC';
@@ -354,11 +369,11 @@ export function generateProposalPDF(data) {
     }
   }
 
-  // ── Footers en todas las páginas ─────────────────────
+  // ── Footers en todas las páginas (con firma de agente) ─
   const totalPages = doc.internal.getNumberOfPages();
   for (let p = 1; p <= totalPages; p++) {
     doc.setPage(p);
-    addPageFooter(doc, p, totalPages, proposalNumber);
+    addPageFooter(doc, p, totalPages, proposalNumber, agente);
   }
 
   return Buffer.from(doc.output('arraybuffer'));

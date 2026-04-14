@@ -1,5 +1,6 @@
 import { showToast } from './uiManager.js';
 import { getQuoteItems, getQuoteItemsForExport, getTotals } from './quoteManager.js';
+import { authFetch } from './authManager.js';
 
 const API        = import.meta.env.VITE_API_URL ?? '';
 let currentStep  = 1;
@@ -146,7 +147,7 @@ async function generateProposal() {
   showToast('Generando propuesta con IA…', 'info');
 
   try {
-    const response = await fetch(`${API}/api/proposal/generate`, {
+    const response = await authFetch(`${API}/api/proposal/generate`, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify(proposalData)

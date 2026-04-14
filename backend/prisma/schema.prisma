@@ -67,3 +67,13 @@ model KitItem {
   service   ServiceItem? @relation(fields: [serviceId], references: [id])
   cantidad  Int          @default(1)
 }
+
+// Agentes comerciales con acceso a la plataforma
+model User {
+  id        Int      @id @default(autoincrement())
+  nombre    String
+  email     String   @unique
+  password  String   // bcrypt hash
+  activo    Boolean  @default(true)
+  createdAt DateTime @default(now())
+}

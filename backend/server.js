@@ -10,6 +10,8 @@ import {
   listServices, createService, updateService, deleteService, seedServices,
   listKits, createKit, deleteKit
 } from './controllers/serviceController.js';
+import { register, login, me } from './controllers/authController.js';
+import { requireAuth } from './controllers/authMiddleware.js';
 
 const app = express();
 const port = 3001;
@@ -20,12 +22,16 @@ app.use(express.json());
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-// ─── Health check (para Docker/Coolify) ────────────────
+// ─── Health check (sin auth — para Docker/Coolify) ─────
 app.get('/health', (req, res) => res.json({ status: 'ok', ts: Date.now() }));
 
+// ─── AUTENTICACIÓN (rutas públicas) ────────────────────
+app.post('/api/auth/register', register);
+app.post('/api/auth/login',    login);
+app.get('/api/auth/me',        requireAuth, me);
 
-// ─── PRODUCTOS / CATÁLOGO ───────────────────────
-app.post('/api/upload', upload.single('file'), async (req, res) => {
+// ─── PRODUCTOS / CATÁLOGO (protegidos) ──────────────────
+app.post('/api/upload', requireAuth, upload.single('file'), async (req, res) => {
   if (!req.file) return res.status(400).json({ error: 'No se subió ningún archivo' });
   try {
     const result = await processImport(req.file);
@@ -36,7 +42,7 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
   }
 });
 
-app.get('/api/products/search', async (req, res) => {
+app.get('/api/products/search', requireAuth, async (req, res) => {
   try {
     const { q } = req.query;
     const products = await searchProducts(q);
@@ -46,23 +52,25 @@ app.get('/api/products/search', async (req, res) => {
   }
 });
 
-// ─── SERVICIOS TABULADOS ────────────────────────
-app.get('/api/services',          listServices);
-app.post('/api/services',         createService);
-app.put('/api/services/:id',      updateService);
-app.delete('/api/services/:id',   deleteService);
-app.post('/api/services/seed',    seedServices);
+// ─── SERVICIOS TABULADOS (protegidos) ────────────────────
+app.get('/api/services',          requireAuth, listServices);
+app.post('/api/services',         requireAuth, createService);
+app.put('/api/services/:id',      requireAuth, updateService);
+app.delete('/api/services/:id',   requireAuth, deleteService);
+app.post('/api/services/seed',    requireAuth, seedServices);
 
-// ─── KITS ───────────────────────────────────────
-app.get('/api/kits',              listKits);
-app.post('/api/kits',             createKit);
-app.delete('/api/kits/:id',       deleteKit);
+// ─── KITS (protegidos) ───────────────────────────────────
+app.get('/api/kits',              requireAuth, listKits);
+app.post('/api/kits',             requireAuth, createKit);
+app.delete('/api/kits/:id',       requireAuth, deleteKit);
 
-// ─── GENERACIÓN PDF ─────────────────────────────
-app.post('/api/quote/generate-pdf', async (req, res) => {
+// ─── GENERACIÓN PDF (protegidos) ─────────────────────────
+app.post('/api/quote/generate-pdf', requireAuth, async (req, res) => {
   try {
     const { items, client } = req.body;
-    const pdfBuffer = generateQuotePDF({ items, client });
+    // Incluir agente del token en el PDF
+    const agente = req.user;
+    const pdfBuffer = generateQuotePDF({ items, client, agente });
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', 'attachment; filename=presupuesto.pdf');
     res.send(pdfBuffer);
@@ -71,16 +79,18 @@ app.post('/api/quote/generate-pdf', async (req, res) => {
   }
 });
 
-app.post('/api/proposal/generate', async (req, res) => {
+app.post('/api/proposal/generate', requireAuth, async (req, res) => {
   try {
     const { project, scope, outOfScope, solution, items, totals, modalidad } = req.body;
+    // Incluir agente del token autenticado
+    const agente = req.user;
 
     const aiContent = await generateProposalContent({
       project, scope, outOfScope, solution, items, totals, modalidad
     });
 
     const pdfBuffer = generateProposalPDF({
-      project, scope, outOfScope, solution, items, totals, aiContent, modalidad
+      project, scope, outOfScope, solution, items, totals, aiContent, modalidad, agente
     });
 
     res.setHeader('Content-Type', 'application/pdf');
