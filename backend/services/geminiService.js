@@ -47,6 +47,39 @@ ${outOfScope || 'No especificado'}
 `;
 }
 
+// Jerarquía de modelos con fallback automático por saturación
+async function getAIResponse(prompt, data) {
+  const modelTierList = [
+    'gemini-3.1-pro',        // Opción A: Máxima inteligencia
+    'gemini-3.1-flash-lite'  // Opción B: Más ligero y con mayor disponibilidad
+  ];
+
+  for (const modelName of modelTierList) {
+    try {
+      const model = genAI.getGenerativeModel({ model: modelName });
+      const result = await model.generateContent({
+        contents: [{ role: 'user', parts: [{ text: prompt }] }]
+      });
+      return result.response.text();
+
+    } catch (error) {
+      const isServiceUnavailable =
+        error.message.includes('503') || error.message.includes('high demand');
+
+      if (isServiceUnavailable) {
+        console.warn(`⚠️ Modelo ${modelName} saturado. Intentando con el siguiente...`);
+        continue;
+      }
+
+      console.error(`❌ Error crítico en ${modelName}:`, error.message);
+      break;
+    }
+  }
+
+  console.error('🚨 Todos los modelos de Gemini fallaron. Usando generador de emergencia.');
+  return generateFallbackContent(data);
+}
+
 export async function generateProposalContent(data) {
   if (!genAI) {
     console.warn('Gemini API key no configurada. Usando contenido de fallback.');
@@ -103,40 +136,5 @@ Usa un tono profesional y orientado a generar confianza. El contenido debe ser c
 NO incluyas bloques de código Mermaid ni diagramas técnicos. Solo texto.
 `;
 
-  async function getAIResponse(prompt, data) {
-  // Definimos la jerarquía de modelos para 2026
-  const modelTierList = [
-    'gemini-3.1-pro',       // Opción A: Máxima inteligencia (Real Risk, lógica compleja)
-    'gemini-3.1-flash-lite' // Opción B: Más ligero y con mayor disponibilidad
-  ];
-
-  for (const modelName of modelTierList) {
-    try {
-      const model = genAI.getGenerativeModel({ model: modelName });
-
-      // Opcional: Podrías añadir un timeout aquí si la API tarda demasiado
-      const result = await model.generateContent({
-        contents: [{ role: 'user', parts: [{ text: prompt }] }]
-      });
-
-      return result.response.text();
-
-    } catch (error) {
-      const isServiceUnavailable = error.message.includes('503') || error.message.includes('high demand');
-      
-      if (isServiceUnavailable) {
-        console.warn(`⚠️ Modelo ${modelName} saturado. Intentando con el siguiente en la lista...`);
-        continue; // Salta a la siguiente iteración del bucle (Opción B)
-      }
-
-      // Si el error no es de saturación (ej. error de red o de API Key), lo logueamos y cortamos
-      console.error(`❌ Error crítico en ${modelName}:`, error.message);
-      break; 
-    }
-  }
-
-  // Si llegamos aquí es porque todos los modelos fallaron o hubo un error no recuperable
-  console.error('🚨 Todos los modelos de Gemini fallaron. Ejecutando generador de emergencia.');
-  return generateFallbackContent(data);
-}
+  return getAIResponse(prompt, data);
 }
