@@ -104,17 +104,18 @@ NO incluyas bloques de código Mermaid ni diagramas técnicos. Solo texto.
 `;
 
   try {
-    const model = genAI.getGenerativeModel({
-      model: 'gemini-1.5-flash'
-    });
+    // Actualizamos el identificador al modelo Flash vigente
+    const model = genAI.getGenerativeModel({
+      model: 'gemini-2.5-flash' 
+    });
 
-    const result = await model.generateContent({
-      contents: [{ role: 'user', parts: [{ text: prompt }] }]
-    });
+    const result = await model.generateContent({
+      contents: [{ role: 'user', parts: [{ text: prompt }] }]
+    });
 
-    return result.response.text();
-  } catch (error) {
-    console.error('Error llamando a Gemini API:', error.message);
-    return generateFallbackContent(data);
-  }
+    return result.response.text();
+  } catch (error) {
+    console.error('Error llamando a Gemini API:', error.message);
+    return generateFallbackContent(data);
+  }
 }
