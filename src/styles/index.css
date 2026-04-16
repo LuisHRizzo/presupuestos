@@ -9,15 +9,15 @@
 /* --- CSS Custom Properties --- */
 :root {
   /* ── Paleta de color ── */
-  --c-bg:          #f1f5f9;   /* fondo general, gris muy claro */
+  --c-bg:          #e2e8f0;   /* fondo general, gris claro para mayor contraste */
   --c-surface:     #ffffff;   /* cards y paneles */
-  --c-surface-2:   #f8fafc;   /* inputs, filas alternas */
+  --c-surface-2:   #f1f5f9;   /* inputs, filas alternas */
   --c-navy:        #0f172a;   /* header, textos de peso */
   --c-navy-mid:    #1e293b;   /* texto principal */
   --c-slate:       #475569;   /* texto secundario */
   --c-muted:       #94a3b8;   /* texto terciario, placeholders */
-  --c-border:      #e2e8f0;   /* bordes suaves */
-  --c-border-md:   #cbd5e1;   /* bordes con más visibilidad */
+  --c-border:      #cbd5e1;   /* bordes un poco más oscuros para inputs evidentes */
+  --c-border-md:   #94a3b8;   /* bordes con más visibilidad */
 
   --c-sky:         #0ea5e9;   /* acento primario — sky blue */
   --c-sky-dark:    #0284c7;
