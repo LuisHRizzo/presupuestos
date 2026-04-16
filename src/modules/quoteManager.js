@@ -130,8 +130,17 @@ function renderServiceCatalog(services) {
     const info = tipos[tipo] || { label: tipo, icon: '📋' };
 
     const group = document.createElement('div');
-    group.className = 'service-group';
-    group.innerHTML = `<div class="service-group-title">${info.icon} ${info.label}</div>`;
+    group.className = 'accordion';
+    group.innerHTML = `
+      <div class="accordion-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="accordion-title" style="margin:0;">${info.icon} ${info.label}</span>
+        <span class="accordion-icon">▼</span>
+      </div>
+      <div class="accordion-content grid">
+      </div>
+    `;
+
+    const contentBox = group.querySelector('.accordion-content');
 
     items.forEach(s => {
       const div = document.createElement('div');
@@ -144,7 +153,7 @@ function renderServiceCatalog(services) {
           + Agregar
         </button>
       `;
-      group.appendChild(div);
+      contentBox.appendChild(div);
     });
 
     container.appendChild(group);

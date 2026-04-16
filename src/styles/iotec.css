@@ -39,19 +39,72 @@
   line-height: 1.5;
 }
 
-/* ── Catálogo de Servicios ───────────────────────────── */
+/* ── Accordions & Catálogos ───────────────────────────── */
 .services-catalog {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+/* ── Accordions Component ──────────────────────────────── */
+.accordion {
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  margin-bottom: var(--sp-3);
+  background: var(--c-surface-2);
+  overflow: hidden;
+  transition: border-color var(--t-fast);
+}
+.accordion:last-child { margin-bottom: 0; }
+.accordion:hover { border-color: var(--c-border-md); }
+
+.accordion-header {
+  padding: var(--sp-3) var(--sp-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.accordion-title-group {
+  display: flex;
+  flex-direction: column;
+}
+.accordion-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--c-navy);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin: 0;
+}
+.accordion-icon {
+  font-size: var(--text-xs);
+  color: var(--c-slate);
+  transition: transform var(--t-base);
+}
+.accordion-content {
+  display: none;
+  padding: var(--sp-4);
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-border);
+}
+.accordion.open .accordion-content {
+  display: block;
+}
+.accordion.open .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content.grid {
+  display: none;
+}
+.accordion.open .accordion-content.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: var(--sp-3);
 }
-
-.service-group {
-  grid-column: 1 / -1;
-  margin-top: var(--sp-2);
-}
-
-.service-group:first-child { margin-top: 0; }
 
 .service-group-title {
   font-size: var(--text-xs);
