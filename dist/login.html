@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sistema de cotización ágil IOTEC / 01Infinito — Generación de presupuestos y propuestas comerciales profesionales para instaladores." />
+  <title>IOTEC — Ingresar</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="/assets/login-DUsSBvlN.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/authManager-DKhZpKv2.js">
+  <link rel="stylesheet" crossorigin href="/assets/authManager-Bwl-TCwr.css">
+</head>
+<body>
+
+  <div class="login-overlay">
+    <div class="login-card">
+
+      <div class="login-logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+          <rect width="40" height="40" rx="10" fill="url(#login-grad)"/>
+          <path d="M12 14h16M12 20h16M12 26h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="login-grad" x1="0" y1="0" x2="40" y2="40">
+              <stop stop-color="#112240"/>
+              <stop offset="1" stop-color="#00a3e0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>
+          <h1 class="login-title">IOTEC / 01Infinito</h1>
+          <p class="login-subtitle">Sistema de Cotización Ágil</p>
+        </div>
+      </div>
+
+      <div id="login-mode">
+        <h2 class="login-heading">Ingresar</h2>
+        <p class="login-hint">Acceso exclusivo para agentes IOTEC</p>
+
+        <div class="login-form">
+          <div class="login-field">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" placeholder="tu@email.com" autocomplete="email" />
+          </div>
+          <div class="login-field">
+            <label for="login-password">Contraseña</label>
+            <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+          <div id="login-error" class="login-error hidden"></div>
+          <button id="btn-login" class="btn btn-primary btn-lg login-submit">Ingresar</button>
+        </div>
+
+        <button class="login-switch" id="go-register" onclick="window.location.href='/registro.html'">
+          ¿Primer acceso? Registrarse
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

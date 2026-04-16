@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (isAuthenticated()) {
     showApp();
   } else {
-    showLoginOverlay();
+    window.location.href = '/login.html';
   }
 });
 
@@ -67,80 +67,6 @@ function showApp() {
 
   // Inicializar app
   initApp();
-}
-
-function showLoginOverlay() {
-  const overlay = document.getElementById('login-overlay');
-  if (overlay) overlay.style.display = 'flex';
-
-  // ── Login ─────────────────────────────────────────────
-  const btnLogin    = document.getElementById('btn-login');
-  const loginErr    = document.getElementById('login-error');
-  const loginEmail  = document.getElementById('login-email');
-  const loginPass   = document.getElementById('login-password');
-
-  btnLogin?.addEventListener('click', async () => {
-    loginErr.classList.add('hidden');
-    btnLogin.disabled   = true;
-    btnLogin.textContent = 'Ingresando...';
-
-    const result = await login(loginEmail.value.trim(), loginPass.value);
-
-    btnLogin.disabled    = false;
-    btnLogin.textContent = 'Ingresar';
-
-    if (result.ok) {
-      showApp();
-    } else {
-      loginErr.textContent = result.error;
-      loginErr.classList.remove('hidden');
-    }
-  });
-
-  // Enter en los campos de login
-  [loginEmail, loginPass].forEach(el => {
-    el?.addEventListener('keydown', e => { if (e.key === 'Enter') btnLogin?.click(); });
-  });
-
-  // ── Register ──────────────────────────────────────────
-  const btnRegister = document.getElementById('btn-register');
-  const regErr      = document.getElementById('register-error');
-  const regNombre   = document.getElementById('reg-nombre');
-  const regEmail    = document.getElementById('reg-email');
-  const regPass     = document.getElementById('reg-password');
-
-  btnRegister?.addEventListener('click', async () => {
-    regErr.classList.add('hidden');
-    btnRegister.disabled    = true;
-    btnRegister.textContent = 'Creando cuenta...';
-
-    const result = await register(
-      regNombre.value.trim(),
-      regEmail.value.trim(),
-      regPass.value
-    );
-
-    btnRegister.disabled    = false;
-    btnRegister.textContent = 'Crear cuenta';
-
-    if (result.ok) {
-      showApp();
-    } else {
-      regErr.textContent = result.error;
-      regErr.classList.remove('hidden');
-    }
-  });
-
-  // ── Toggle login ↔ register ──────────────────────────
-  document.getElementById('go-register')?.addEventListener('click', () => {
-    document.getElementById('login-mode').classList.add('hidden');
-    document.getElementById('register-mode').classList.remove('hidden');
-  });
-
-  document.getElementById('go-login')?.addEventListener('click', () => {
-    document.getElementById('register-mode').classList.add('hidden');
-    document.getElementById('login-mode').classList.remove('hidden');
-  });
 }
 
 // ─── App Initialization ───────────────────────────────────
